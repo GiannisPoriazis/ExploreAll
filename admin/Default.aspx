@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/system/template/base.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ExploreAll_Admin.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin/system/template/base.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ExploreAll_Admin.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
     <!-- Required meta tags -->
     <meta charset="utf-8">
