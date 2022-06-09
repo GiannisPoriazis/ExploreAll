@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
     <Content Include="public\assets\check_avail.php" />
     <Content Include="public\assets\contact.php" />
     <Content Include="public\assets\contact_detail.php" />
@@ -606,7 +607,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="system\templates\base.Master.cs">
+      <DependentUpon>base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\templates\base.Master.designer.cs">
+      <DependentUpon>base.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -619,6 +631,7 @@
     <Content Include="public\css\icon_fonts\font\icon_set_1.eot" />
     <Content Include="public\css\icon_fonts\font\icon_set_1.ttf" />
     <Content Include="public\css\icon_fonts\font\icon_set_1.woff" />
+    <Content Include="system\templates\base.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
