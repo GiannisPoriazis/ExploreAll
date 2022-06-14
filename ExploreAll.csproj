@@ -43,7 +43,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CommandAsSql, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\CommandAsSql.1.0.7\lib\netstandard2.0\CommandAsSql.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlClient, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.4.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -69,6 +78,7 @@
   <ItemGroup>
     <Content Include="admin\Default.aspx" />
     <Content Include="admin\Login.aspx" />
+    <Content Include="admin\headings.aspx" />
     <Content Include="admin\public\build\css\custom.css" />
     <Content Include="admin\public\build\css\custom.min.css" />
     <Content Include="admin\public\build\images\back_disabled.png" />
@@ -80,6 +90,7 @@
     <Content Include="admin\public\build\images\loading.gif" />
     <Content Include="admin\public\build\js\custom.js" />
     <Content Include="admin\public\build\js\custom.min.js" />
+    <Content Include="admin\public\css\exploreall.admin.all.css" />
     <Content Include="admin\public\images\avatar-1.jpg" />
     <Content Include="admin\public\images\avatar-2.jpg" />
     <Content Include="admin\public\images\avatar-3.jpg" />
@@ -112,6 +123,7 @@
     <Content Include="admin\public\images\product-pic.jpg" />
     <Content Include="admin\public\images\slack.png" />
     <Content Include="admin\public\images\switch.png" />
+    <Content Include="admin\public\js\exploreall.admin.all.js" />
     <Content Include="admin\public\libs\css\style.css" />
     <Content Include="admin\public\libs\js\dashboard-ecommerce.js" />
     <Content Include="admin\public\libs\js\dashboard-finance.js" />
@@ -709,6 +721,7 @@
     <Content Include="admin\public\vendor\timeline\js\main.js" />
     <Content Include="admin\public\vendor\vector-map\jqvmap.css" />
     <Content Include="Default.aspx" />
+    <Content Include="admin\ExploreAllAdmin.aspx" />
     <Content Include="public\assets\check_avail.php" />
     <Content Include="public\assets\contact.php" />
     <Content Include="public\assets\contact_detail.php" />
@@ -1256,6 +1269,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="admin\headings.aspx.cs">
+      <DependentUpon>headings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\headings.aspx.designer.cs">
+      <DependentUpon>headings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\system\template\base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1266,6 +1286,13 @@
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ExploreAllAdmin.aspx.cs">
+      <DependentUpon>ExploreAllAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ExploreAllAdmin.aspx.designer.cs">
+      <DependentUpon>ExploreAllAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="system\templates\base.Master.cs">
@@ -1682,6 +1709,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExploreAll.DB\ExploreAll.DB.csproj">
+      <Project>{790e8330-5803-4ad5-9a31-0926833b836b}</Project>
+      <Name>ExploreAll.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExploreAll.UI\ExploreAll.UI.csproj">
+      <Project>{696c559b-2eb2-40d9-a6ec-c96969797218}</Project>
+      <Name>ExploreAll.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
