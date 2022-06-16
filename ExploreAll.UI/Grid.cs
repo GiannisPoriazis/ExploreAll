@@ -96,8 +96,7 @@ namespace ExploreAll.UI
                 var " + ID + "columns = [" + JsonConvert.SerializeObject(columns).Remove(0,1).Remove(JsonConvert.SerializeObject(columns).Length-2) + @"];
                 var " + ID + @"newRecords = [];
                 var " + ID + @"deletedRecords = [];
-                const " + ID + "gridOptions = { columnDefs: " + ID + "columnDefs, rowData: " + ID + "rowData , rowSelection: 'single',  pagination: true}" + @";
-                exploreall.setupGrid(" + ID + "gridOptions, " + ID + ", '" + Editable + "');";
+                exploreall.setupGrid('" + DataSource + "', " + ID + ", '" + Editable + "');";
             registerJavaScript(jsinitialization);
         }
 

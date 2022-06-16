@@ -1,13 +1,43 @@
 ﻿var exploreall = {};
 
-exploreall.setupGrid = function (options, grid, controls) {
+exploreall.setupGrid = function (source, grid, controls) {
     document.addEventListener('DOMContentLoaded', () => {
-        new agGrid.Grid(grid, options);
-        options.api.sizeColumnsToFit();
-        if (controls.toLowerCase() == "true") {
-            var gridControls = grid.parentElement.querySelector(".gridControls");
-            grid.querySelector(".ag-paging-panel").appendChild(gridControls);
+        var data = { DataSource: source };
+
+        var suc = function (res, gridDiv, ctls) {
+            if (res.d) {
+                gridDiv.innerHtml = "";
+                var options = JSON.parse(res.d);
+                for (var i = 0; i < options.columnDefs.length; i++) {
+                    options.columnDefs[i] = JSON.parse(options.columnDefs[i]);
+                }
+                for (var i = 0; i < options.rowData.length; i++) {
+                    options.rowData[i] = JSON.parse(options.rowData[i]);
+                }
+                new agGrid.Grid(gridDiv, options);
+                options.api.sizeColumnsToFit();
+                if (ctls.toLowerCase() == "true") {
+                    var gridControls = gridDiv.parentElement.querySelector(".gridControls");
+                    gridDiv.querySelector(".ag-paging-panel").appendChild(gridControls);
+                }
+            }
         }
+
+        $.ajax({
+            type: "POST",
+            url: "ExploreAllAdmin.aspx/RefreshGrid",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            dataType: "json",
+            success: function (res) {
+                exploreall.endProgress();
+                suc(res, grid, controls);
+            },
+            error: function (res) {
+                exploreall.endProgress();
+                //window.location.reload();
+            },
+        });
     });
 } 
 

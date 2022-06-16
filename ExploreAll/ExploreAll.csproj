@@ -1294,6 +1294,7 @@
     <Compile Include="admin\ExploreAllAdmin.aspx.designer.cs">
       <DependentUpon>ExploreAllAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ExploreAllHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="system\templates\base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>

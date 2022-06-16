@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -122,6 +123,34 @@ namespace ExploreAll
             }
 
             return "ok";
+        }
+
+        [WebMethod]
+        public static string RefreshGrid(string DataSource)
+        {
+            DataTable dt = DBSupport.GetData(DataSource);
+
+            List<string> columns = TableEntities.TableColumns[DataSource];
+            List<object> rowData = new List<object>();
+            List<string> columnDefs = new List<string>();
+
+            foreach (DataRow data in dt.Rows)
+            {
+                string rd = "{";
+                for (int i = 0; i < columns.Count; i++)
+                {
+                    rd += "\"" + columns[i] + "\": \"" + data[i] + "\",";
+                }
+                rd = rd.Remove(rd.Length - 1) + "}";
+                rowData.Add(rd);
+            }
+
+            foreach (string col in columns)
+            {
+                columnDefs.Add("{\"field\": \"" + col + "\", \"editable\": true, \"filter\": true}");
+            }
+
+            return "{ \"columnDefs\": " + JsonConvert.SerializeObject(columnDefs) + ", \"rowData\": " + JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true}";
         }
     }
 }
