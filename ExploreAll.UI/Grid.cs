@@ -42,19 +42,19 @@ namespace ExploreAll.UI
 
                 AddRecord = new HtmlGenericControl("button");
                 AddRecord.Attributes.Add("type", "button");
-                AddRecord.Attributes.Add("onclick", $"exploreall.addGridRecord({ID}gridOptions, {ID}newRecords)");
+                AddRecord.Attributes.Add("onclick", $"exploreall.addGridRecord({ID})");
                 AddRecord.InnerText = "New";
                 controlWrapper.Controls.Add(AddRecord);
 
                 RemoveRecord = new HtmlGenericControl("button");
                 RemoveRecord.Attributes.Add("type", "button");
-                RemoveRecord.Attributes.Add("onclick", $"exploreall.removeGridRecord({ID}gridOptions, {ID}deletedRecords)");
+                RemoveRecord.Attributes.Add("onclick", $"exploreall.removeGridRecord({ID})");
                 RemoveRecord.InnerText = "Delete";
                 controlWrapper.Controls.Add(RemoveRecord);
 
                 UpdateGrid = new HtmlGenericControl("button");
                 UpdateGrid.Attributes.Add("type", "button");
-                UpdateGrid.Attributes.Add("onclick", $"exploreall.updateGrid({ID}gridOptions, {ID}newRecords, {ID}deletedRecords, {ID}columns, '{DataSource}')");
+                UpdateGrid.Attributes.Add("onclick", $"exploreall.updateGrid({ID}, '{DataSource}',{Editable.ToString().ToLower()})");
                 UpdateGrid.InnerText = "Save";
                 controlWrapper.Controls.Add(UpdateGrid);
 
@@ -69,34 +69,20 @@ namespace ExploreAll.UI
             gridWrapper.Controls.Add(GridDiv);
             Controls.Add(gridWrapper);
 
-            DataTable dt = DBSupport.GetData(DataSource);
+            List<string> columns = new List<string>();
 
-            List<string> columns = TableEntities.TableColumns[DataSource];
-            List<object> rowData = new List<object>();
-            List<string> columnDefs = new List<string>();
-
-            foreach(DataRow data in dt.Rows)
+            foreach (TableEntities.GridColumn col in TableEntities.TableColumns[DataSource])
             {
-                string rd = "{";
-                for (int i = 0; i < columns.Count; i++)
-                {
-                    rd += columns[i] + ": '" + data[i] + "',";
-                }
-                rd = rd.Remove(rd.Length - 1) + "}";
-                rowData.Add(rd);
+                columns.Add(col.field);
             }
 
-            foreach(string col in columns)
-            {
-                columnDefs.Add(@"{field: '" + col + "', editable: true, filter: true}");
-            }
-
-            string jsinitialization = @"var " + ID + "columnDefs = " + JsonConvert.SerializeObject(columnDefs).Replace("\"", "") + @";
-                var " + ID + "rowData = " + JsonConvert.SerializeObject(rowData).Replace("\"", "") + @";
-                var " + ID + "columns = [" + JsonConvert.SerializeObject(columns).Remove(0,1).Remove(JsonConvert.SerializeObject(columns).Length-2) + @"];
-                var " + ID + @"newRecords = [];
-                var " + ID + @"deletedRecords = [];
-                exploreall.setupGrid('" + DataSource + "', " + ID + ", '" + Editable + "');";
+            string jsinitialization = @"var " + ID + @" = {
+                Id: '" + ID + @"',
+                columns: [" + JsonConvert.SerializeObject(columns).Remove(0, 1).Remove(JsonConvert.SerializeObject(columns).Length - 2) + @"],
+                newRecords: [],
+                deletedRecords: [],
+                gridOptions: null};
+                exploreall.setupGrid('" + DataSource + "', '" + Editable + "', " + ID + ");";
             registerJavaScript(jsinitialization);
         }
 
