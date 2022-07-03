@@ -16,8 +16,11 @@ namespace ExploreAll
             public bool filter { get; set; }
             public bool hide { get; set; }
             public bool suppressToolPanel { get; set; }
+            public string cellRenderer { get; set; }
+            public string cellRendererParams { get; set; }
+            public string cellEditor { get; set; }
 
-            public GridColumn(string Field, bool Editable, bool Filter, bool Hide, bool SuppressToolPanel, string HeaderName = null)
+            public GridColumn(string Field, bool Editable, bool Filter, bool Hide, bool SuppressToolPanel, string HeaderName = null, string CellRenderer = null, string CellRendererParams = null, string CellEditor = null)
             {
                 field = Field;
                 editable = Editable;
@@ -25,10 +28,14 @@ namespace ExploreAll
                 hide = Hide;
                 suppressToolPanel = SuppressToolPanel;
 
-                if (String.IsNullOrEmpty(headerName))
+                if (String.IsNullOrEmpty(HeaderName))
                     headerName = Field;
                 else
                     headerName = HeaderName;
+
+                cellRenderer = CellRenderer;
+                cellRendererParams = CellRendererParams;
+                cellEditor = CellEditor;
             }
         }
 
@@ -46,12 +53,23 @@ namespace ExploreAll
                 {
                     new GridColumn("Id", false, false, true, true),
                     new GridColumn("Username", true, true, false, false),
-                    new GridColumn("Password", true, true, false, false),
+                    new GridColumn("Password", false, false, false, false, CellRenderer: "passwordFormatterComponent"),
                     new GridColumn("Email", true, true, false, false),
                     new GridColumn("Telephone", true, true, false, false),
                     new GridColumn("FirstName", true, true, false, false, "First Name"),
                     new GridColumn("LastName", true, true, false, false, "Last Name"),
-                    new GridColumn("Role", true, true, false, false),
+                    new GridColumn("Role", true, true, false, false, CellEditor: "agSelectCellEditor"),
+                }
+            },
+            {"SightsTable", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Name", true, true, false, false),
+                    new GridColumn("Description", true, true, false, false),
+                    new GridColumn("Lat", true, true, false, false),
+                    new GridColumn("Long", true, true, false, false),
+                    new GridColumn("Label", true, true, false, false),
+                    new GridColumn("Thumbnail", false, false, false, false, CellRenderer: "fileUploaderComponent", CellRendererParams: null),
                 }
             },
         };

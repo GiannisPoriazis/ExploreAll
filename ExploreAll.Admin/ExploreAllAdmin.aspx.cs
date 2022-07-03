@@ -11,6 +11,8 @@ using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ExploreAll;
+using System.IO;
+using System.Text.RegularExpressions;
 
 namespace ExploreAll_Admin
 {
@@ -190,5 +192,26 @@ namespace ExploreAll_Admin
 
             return "{ \"columnDefs\": " + columnDefs + ", \"rowData\": " + JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true}";
         }
+
+        [WebMethod]
+        public static string UploadSingleFile(string FileUri)
+        {
+            FileUri = Regex.Replace(FileUri, @"^data:image\/[a-zA-Z]+;base64,", string.Empty);
+
+            string fileName = Guid.NewGuid() + ".png";
+            try
+            {
+                using (FileStream fs = File.Create(HttpContext.Current.Server.MapPath(ConfigurationManager.AppSettings["UploadDirectory"]) + fileName))
+                {
+                    byte[] image = Convert.FromBase64String(FileUri);
+                    fs.Write(image, 0, image.Length);
+                }
+                return fileName;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+        } 
     }
 }

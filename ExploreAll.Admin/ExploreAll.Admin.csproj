@@ -72,6 +72,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="ExploreAllAdmin.aspx" />
+    <Content Include="GetImageSource.aspx" />
     <Content Include="Labels.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="public\build\css\custom.css" />
@@ -119,6 +120,8 @@
     <Content Include="public\images\slack.png" />
     <Content Include="public\images\switch.png" />
     <Content Include="public\js\exploreall.admin.all.js" />
+    <Content Include="public\js\FileUploaderComponent.js" />
+    <Content Include="public\js\PasswordFormatterComponent.js" />
     <Content Include="public\libs\css\style.css" />
     <Content Include="public\libs\js\dashboard-ecommerce.js" />
     <Content Include="public\libs\js\dashboard-finance.js" />
@@ -715,6 +718,7 @@
     <Content Include="public\vendor\timeline\img\cd-icon-picture.svg" />
     <Content Include="public\vendor\timeline\js\main.js" />
     <Content Include="public\vendor\vector-map\jqvmap.css" />
+    <Content Include="Sights.aspx" />
     <Content Include="signout.aspx" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />
@@ -731,6 +735,13 @@
     <Compile Include="ExploreAllAdmin.aspx.designer.cs">
       <DependentUpon>ExploreAllAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GetImageSource.aspx.cs">
+      <DependentUpon>GetImageSource.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetImageSource.aspx.designer.cs">
+      <DependentUpon>GetImageSource.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Labels.aspx.cs">
       <DependentUpon>Labels.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -746,6 +757,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sights.aspx.cs">
+      <DependentUpon>Sights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sights.aspx.designer.cs">
+      <DependentUpon>Sights.aspx</DependentUpon>
+    </Compile>
     <Compile Include="signout.aspx.cs">
       <DependentUpon>signout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1173,6 +1191,9 @@
       <Project>{696c559b-2eb2-40d9-a6ec-c96969797218}</Project>
       <Name>ExploreAll.UI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\uploaded\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

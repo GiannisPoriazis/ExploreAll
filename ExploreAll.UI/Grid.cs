@@ -67,7 +67,7 @@ namespace ExploreAll.UI
             GridDiv.Attributes.Add("data-source", DataSource);
 
             gridWrapper.Controls.Add(GridDiv);
-            Controls.Add(gridWrapper);
+            Controls.Add(gridWrapper);         
 
             List<string> columns = new List<string>();
 

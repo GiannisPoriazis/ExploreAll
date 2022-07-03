@@ -5,6 +5,6 @@
     <exploreall:Grid runat="server" DataSource="LabelsTable" ID="LabelsGrid" Editable="true" GridStyle="alpine" WrapperCssClass="FullWidth Controls"></exploreall:Grid>
     <script>
         pageTitle = "Labels";
-        pagePath = "General";
+        pagePath = "Content";
     </script>
 </asp:Content>

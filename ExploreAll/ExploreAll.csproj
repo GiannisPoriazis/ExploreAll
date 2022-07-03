@@ -613,6 +613,7 @@
     <Content Include="public\layerslider\skins\v5\skin.css" />
     <Content Include="public\layerslider\skins\v5\skin.png" />
     <Content Include="public\video\intro.mp4" />
+    <Content Include="Sights.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -620,8 +621,18 @@
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ExploreAllHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sights.aspx.cs">
+      <DependentUpon>Sights.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sights.aspx.designer.cs">
+      <DependentUpon>Sights.aspx</DependentUpon>
+    </Compile>
     <Compile Include="system\templates\base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

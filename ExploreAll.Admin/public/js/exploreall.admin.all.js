@@ -1,5 +1,12 @@
 ﻿var exploreall = {};
 
+exploreall.selectEditorParams = [
+    {
+        key: 'Role',
+        values: ["Administrator", "User"]
+    }
+];
+
 exploreall.setupGrid = function (source, controls, gridObj) {
     var gridElem = document.getElementById(gridObj.Id);
     var data = { DataSource: source };
@@ -10,6 +17,19 @@ exploreall.setupGrid = function (source, controls, gridObj) {
                 
             gridDiv.innerHTML = "";
             gridObject.gridOptions = JSON.parse(res.d);
+            gridObject.gridOptions.components = {
+                fileUploaderComponent: FileUploaderComponent,
+                passwordFormatterComponent: PasswordFormatterComponent
+            };
+                        
+            for (var i = 0; i < gridObj.gridOptions.columnDefs.length; i++) {
+                var cellEditorParams = exploreall.selectEditorParams.find(x => x.key == gridObj.gridOptions.columnDefs[i].field);
+                if (cellEditorParams)
+                    gridObj.gridOptions.columnDefs[i].cellEditorParams = {
+                        values: cellEditorParams.values
+                    }
+            }
+
             for (var i = 0; i < gridObject.gridOptions.rowData.length; i++) {
                 gridObject.gridOptions.rowData[i] = JSON.parse(gridObject.gridOptions.rowData[i]);
             }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/system/templates/base.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ExploreAll.Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/system/templates/base.Master" AutoEventWireup="true" CodeBehind="~/Default.aspx.cs" Inherits="ExploreAll.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300" rel="stylesheet" type="text/css">
 
     <!-- BASE CSS -->
-    <link href="<%# ResolveClientUrl(@"~/")%>public/css/animate.min.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/animate.min.css" rel="stylesheet">  
     <link href="<%# ResolveClientUrl(@"~/")%>public/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%# ResolveClientUrl(@"~/")%>public/css/style.css" rel="stylesheet">
     <link href="<%# ResolveClientUrl(@"~/")%>public/css/menu.css" rel="stylesheet">
@@ -28,204 +28,14 @@
 
     <!-- Modernizr -->
     <script src="<%# ResolveClientUrl(@"~/")%>public/js/modernizr.js"></script>
+
+    <style>
+        header {
+            background: transparent;
+        }
+    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
-    <div class="layer"></div>
-    <!-- Menu mask -->
-
-    <!-- Header ================================================== -->
-    <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col--md-4 col-sm-3 col-xs-4">
-                    <div id="logo_home">
-                        <h1><a href="index.html" title="TravelGuide template">TravelGuide template</a></h1>
-                    </div>
-                </div>
-                 <nav class="col--md-8 col-sm-9 col-xs-8">
-                    <ul id="primary_nav">
-                        <li id="wishlist">
-                            <a href="wishlist.html">Αγαπημένα</a>
-                        </li>
-                        <li id="buy">
-                            <a href="#0">Σύνδεση</a>
-                        </li>
-                        <li id="search">
-                            <div class="dropdown dropdown-search">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-search"></i></a>
-                                <div class="dropdown-menu">
-                                    <form>
-                                        <div id="custom-search-input-header">
-                                            <input type="text" class="form-control" placeholder="Αναζήτηση...">
-                                            <input type="submit" class="btn_search_2" value="submit">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
-                    <div class="main-menu">
-                        <div id="header_menu">
-                            <img src="<%# ResolveClientUrl(@"~/")%>public/img/logo.png" alt="img" data-retina="true" width="170" height="30">
-                        </div>
-                        <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
-                        <ul>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Αρχική</a>
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Διαμονή<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="florence-must-see-grid.html">Must see</a>
-                                    </li>
-                                    <li><a href="florence-events-grid.html">Events</a>
-                                    </li>
-                                    <li><a href="florence-hotels-grid.html">Hotels</a>
-                                    </li>
-                                    <li><a href="florence-restaurants-grid.html">Restaurants</a>
-                                    </li>
-                                    <li><a href="florence-bars-grid.html">Cocktails Bars</a>
-                                    </li>
-                                    <li><a href="florence-shops-grid.html">Shops</a>
-                                    </li>
-                                    <li><a href="florence-transports.html">Transports</a>
-                                    </li>
-                                    <li><a href="faq.html">Info&amp;Faqs</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="megamenu submenu">
-                                <a href="javascript:void(0);" class="show-submenu-mega">Αξιοθέατα<i class="icon-down-open-mini"></i></a>
-                                <div class="menu-wrapper">
-                                    <div class="col-md-4">
-                                        <h3>Pages</h3>
-                                        <ul>
-                                            <li><a href="about.html">About us</a>
-                                            </li>
-                                            <li><a href="blog.html">Blog</a>
-                                            </li>
-                                            <li><a href="faq.html">Faq</a>
-                                            </li>
-                                            <li><a href="contacts.html">Contacts</a>
-                                            </li>
-                                            <li><a href="coming_soon/index.html">Site launch/Coming soon</a>
-                                            </li>
-                                            <li><a href="florence-audio-guides.html">Audio guides page</a>
-                                            </li>
-                                             <li><a href="full_screen_map.html">Full screen map</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h3>Pages</h3>
-                                        <ul>
-                                            <li><a href="gallery-3-columns.html">Gallery 3 columns</a>
-                                            </li>
-                                            <li><a href="gallery-4-columns.html">Gallery 4 columns</a>
-                                            </li>
-                                            <li><a href="subscribe.html">Subscribe plan</a>
-                                            </li>
-                                            <li><a href="subscribe-working.html">Subscribe plan working</a>
-                                            </li>
-                                            <li><a href="florence-must-see-list.html">List page</a>
-                                            </li>
-                                            <li><a href="florence-must-see-grid.html">Grid page</a>
-                                            </li>
-                                            <li><a href="florence-must-see-map-listing.html">Map list page</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h3>Elements</h3>
-                                        <ul>
-                                            <li><a href="icon_pack_1.html"><i class="icon-inbox-alt"></i> Icon pack 1</a>
-                                            </li>
-                                            <li><a href="icon_pack_2.html"><i class="icon-inbox-alt"></i> Icon pack 2</a>
-                                            </li>
-                                            <li><a href="icon_pack_3.html"><i class="icon-inbox-alt"></i> Icon pack 3</a>
-                                            </li>
-                                            <li><a href="shortcodes.html"><i class="icon-tools"></i> Shortcodes</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- End menu-wrapper -->
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Καταστήματα<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="florence-must-see-grid.html">Must see</a>
-                                    </li>
-                                    <li><a href="florence-events-grid.html">Events</a>
-                                    </li>
-                                    <li><a href="florence-hotels-grid.html">Hotels</a>
-                                    </li>
-                                    <li><a href="florence-restaurants-grid.html">Restaurants</a>
-                                    </li>
-                                    <li><a href="florence-bars-grid.html">Cocktails Bars</a>
-                                    </li>
-                                    <li><a href="florence-shops-grid.html">Shops</a>
-                                    </li>
-                                    <li><a href="florence-transports.html">Transports</a>
-                                    </li>
-                                    <li><a href="faq.html">Info&amp;Faqs</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Αγγελίες<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="florence-must-see-grid.html">Must see</a>
-                                    </li>
-                                    <li><a href="florence-events-grid.html">Events</a>
-                                    </li>
-                                    <li><a href="florence-hotels-grid.html">Hotels</a>
-                                    </li>
-                                    <li><a href="florence-restaurants-grid.html">Restaurants</a>
-                                    </li>
-                                    <li><a href="florence-bars-grid.html">Cocktails Bars</a>
-                                    </li>
-                                    <li><a href="florence-shops-grid.html">Shops</a>
-                                    </li>
-                                    <li><a href="florence-transports.html">Transports</a>
-                                    </li>
-                                    <li><a href="faq.html">Info&amp;Faqs</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Ενοικίαση<i class="icon-down-open-mini"></i></a>
-                                <ul>
-                                    <li><a href="florence-must-see-grid.html">Must see</a>
-                                    </li>
-                                    <li><a href="florence-events-grid.html">Events</a>
-                                    </li>
-                                    <li><a href="florence-hotels-grid.html">Hotels</a>
-                                    </li>
-                                    <li><a href="florence-restaurants-grid.html">Restaurants</a>
-                                    </li>
-                                    <li><a href="florence-bars-grid.html">Cocktails Bars</a>
-                                    </li>
-                                    <li><a href="florence-shops-grid.html">Shops</a>
-                                    </li>
-                                    <li><a href="florence-transports.html">Transports</a>
-                                    </li>
-                                    <li><a href="faq.html">Info&amp;Faqs</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End main-menu -->
-                </nav>
-            </div>
-            <!-- End row -->
-        </div>
-        <!-- End container -->
-    </header>
-    <!-- End Header =============================================== -->
-
+<asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">  
     <!-- SubHeader =============================================== -->
     <section class="header-video">
         <div id="hero_video">
@@ -245,10 +55,8 @@
 
     <div class="container margin_60_30">
         <div class="main_title">
-            <h2><strong>Explore</strong> what's interesting</h2>
-            <p>
-                Ne his postulant posidonium adversarium. Ius tollit tamquam indoctum ea, cu quo equidem perfecto adipiscing. Eu mel aliquid delenit. Recteque laboramus ea est, te qui eirmod similique.
-            </p>
+            <asp:Literal runat="server" ID="Header1"></asp:Literal>
+            <asp:Literal runat="server" ID="Subtitle1"></asp:Literal>
             <span><em></em></span>
         </div>
 

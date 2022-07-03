@@ -26,3 +26,12 @@
 .dashboard-content {
     padding: 30px 30px 0px 30px;
 }
+
+.btn-simple {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: blue;
+}

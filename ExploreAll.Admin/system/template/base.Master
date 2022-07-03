@@ -28,6 +28,8 @@
     <%-- Custom JS --%>
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/exploreall.admin.all.js"></script>
+    <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/FileUploaderComponent.js"></script>
+    <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/PasswordFormatterComponent.js"></script>
 
     <asp:ContentPlaceHolder ID="headContent" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -184,14 +186,17 @@
                                         </div>
                                     </li> 
                                     <li class="nav-divider">
-                                        Page Appearance
+                                        Content
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>General</a>
+                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Content</a>
                                         <div id="submenu-5" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="Labels.aspx">Labels</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="Sights.aspx">Sights</a>
                                                 </li>
                                             </ul>
                                         </div>
