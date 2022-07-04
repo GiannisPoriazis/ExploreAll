@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using ExploreAll;
@@ -22,6 +23,7 @@ namespace ExploreAll.UI
         public string WrapperCssClass { get; set; }
         public string DataSource { get; set; }
         public bool Editable { get; set; }
+        public string Permission { get; set; }
 
         protected HtmlGenericControl gridWrapper;
         protected HtmlGenericControl GridDiv;
@@ -32,6 +34,24 @@ namespace ExploreAll.UI
 
         protected override void CreateChildControls()
         {
+            if(!String.IsNullOrEmpty(Permission))
+            {
+                DataTable UserRoles = DBSupport.GetData("UserPermissions");
+                DataRow User = null;
+
+                foreach(DataRow role in UserRoles.Rows)
+                {
+                    if (role["Role"].ToString() == HttpContext.Current.Session["Role"].ToString())
+                    {
+                        User = role;
+                        break;
+                    }
+                }
+
+                if (!(bool)User[Permission])
+                    Editable = false;
+            }
+
             gridWrapper = new HtmlGenericControl("div");
             gridWrapper.Attributes.Add("class", WrapperCssClass);
 

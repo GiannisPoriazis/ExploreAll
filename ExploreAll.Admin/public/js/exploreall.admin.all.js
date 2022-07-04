@@ -3,31 +3,36 @@
 exploreall.selectEditorParams = [
     {
         key: 'Role',
-        values: ["Administrator", "User"]
+        values: null
     }
 ];
 
 exploreall.setupGrid = function (source, controls, gridObj) {
     var gridElem = document.getElementById(gridObj.Id);
     var data = { DataSource: source };
-    var suc = function (res, gridDiv, ctls, gridObject) {
+    var suc = function (res, gridDiv, ctls, gridObject) {        
         if (res.d) {
+            gridObject.gridOptions = JSON.parse(res.d);
+
             if (ctls)
                 var gridControls = gridDiv.parentElement.querySelector(".gridControls");
                 
             gridDiv.innerHTML = "";
-            gridObject.gridOptions = JSON.parse(res.d);
             gridObject.gridOptions.components = {
                 fileUploaderComponent: FileUploaderComponent,
                 passwordFormatterComponent: PasswordFormatterComponent
             };
+
+            exploreall.selectEditorParams.find(x => x.key == "Role").values = gridObject.gridOptions.cellEditorParamValues;
                         
-            for (var i = 0; i < gridObj.gridOptions.columnDefs.length; i++) {
-                var cellEditorParams = exploreall.selectEditorParams.find(x => x.key == gridObj.gridOptions.columnDefs[i].field);
+            for (var i = 0; i < gridObject.gridOptions.columnDefs.length; i++) {
+                var cellEditorParams = exploreall.selectEditorParams.find(x => x.key == gridObject.gridOptions.columnDefs[i].field);
                 if (cellEditorParams)
-                    gridObj.gridOptions.columnDefs[i].cellEditorParams = {
+                    gridObject.gridOptions.columnDefs[i].cellEditorParams = {
                         values: cellEditorParams.values
                     }
+                if (!ctls)
+                    gridObject.gridOptions.columnDefs[i].editable = false;
             }
 
             for (var i = 0; i < gridObject.gridOptions.rowData.length; i++) {

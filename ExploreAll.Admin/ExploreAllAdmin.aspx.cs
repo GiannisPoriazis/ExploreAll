@@ -168,7 +168,7 @@ namespace ExploreAll_Admin
         [WebMethod]
         public static string RefreshGrid(string DataSource)
         {
-            DataTable dt = DBSupport.GetData(DataSource);
+            DataTable dt = DBSupport.GetData(DataSource);            
 
             List<string> columns = new List<string>();
             List<object> rowData = new List<object>();
@@ -190,7 +190,17 @@ namespace ExploreAll_Admin
                 rowData.Add(rd);
             }
 
-            return "{ \"columnDefs\": " + columnDefs + ", \"rowData\": " + JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true}";
+            DataTable dtRoles = DBSupport.GetData("UserPermissions");
+            string UserRoles = "[";
+
+            foreach(DataRow role in dtRoles.Rows)
+            {
+                UserRoles += $"\"{role["Role"]}\",";
+            }
+
+            UserRoles = UserRoles.Remove(UserRoles.LastIndexOf(",")) + "]";
+
+            return "{ \"columnDefs\": " + columnDefs + ", \"rowData\": " + JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true, \"cellEditorParamValues\": " + UserRoles + "}";
         }
 
         [WebMethod]
