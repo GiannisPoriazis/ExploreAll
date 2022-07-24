@@ -107,10 +107,12 @@ exploreall.updateGrid = function (gridObj, table, controls) {
         success: function (res) {
             exploreall.endProgress();
             suc(res, table, controls, gridObj);
+            exploreall.notify("Operation successful.");
         },
         error: function (res) {
             exploreall.endProgress();
             fail(res, table, controls, gridObj);
+            exploreall.notify("Operation failed.", true);
         },
     });
 
@@ -158,12 +160,32 @@ exploreall.PageMethod = function (path, paramArray, successFn, errorFn) {
             if (callsuccess) {
                 callsuccess(res);
             }
+            exploreall.notify("Operation successful.");
         },
         error: function (res, statusText, errorThrown) {
             exploreall.endProgress();            
             if (callerror) {
                 callerror(res);
             }
+            exploreall.notify("Operation failed.", true);
         },
     });
 };
+
+exploreall.notify = function (msg, error = false) {
+    var notifWrapper = document.createElement("div");
+    notifWrapper.classList.add("notification-top-bar");
+
+    var notification = document.createElement("p");
+    notification.innerText = msg;
+
+    if (error)
+        notifWrapper.classList.add("error");
+
+    notifWrapper.appendChild(notification);
+    document.querySelector(".dashboard-wrapper").prepend(notifWrapper);
+
+    setTimeout(function () {
+        notifWrapper.remove();
+    }, 4000);
+}
