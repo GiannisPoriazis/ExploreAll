@@ -15,6 +15,15 @@ namespace ExploreAll
     {
 
         /// <summary>
+        /// Welcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Welcome;
+
+        /// <summary>
         /// Header1 control.
         /// </summary>
         /// <remarks>
@@ -31,5 +40,14 @@ namespace ExploreAll
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Subtitle1;
+
+        /// <summary>
+        /// Card1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Card1;
     }
 }

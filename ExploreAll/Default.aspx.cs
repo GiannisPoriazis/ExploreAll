@@ -27,8 +27,15 @@ namespace ExploreAll
                 case "Subtitle1":
                     Subtitle1.Text = data["Value"].ToString();
                     break;
+                case "Welcome":
+                    Welcome.Text = data["Value"].ToString();
+                    break;
+                case "Card1":
+                    Card1.Text =  data["Value"].ToString();
+                    break;
                 default:
-                    break;    
+                    break;  
+                    
             }
         }
     }
