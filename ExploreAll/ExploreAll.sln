@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.DB", "..\Explore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Admin", "..\ExploreAll.Admin\ExploreAll.Admin.csproj", "{8FEDA520-B7A4-4598-9471-DB01EB09BB51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Common", "..\ExploreAll.Common\ExploreAll.Common.csproj", "{0E63D808-CEA8-452F-9F36-F6718AA80EFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8FEDA520-B7A4-4598-9471-DB01EB09BB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FEDA520-B7A4-4598-9471-DB01EB09BB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FEDA520-B7A4-4598-9471-DB01EB09BB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

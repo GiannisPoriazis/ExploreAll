@@ -10,7 +10,9 @@ exploreall.selectEditorParams = [
 exploreall.setupGrid = function (source, controls, gridObj) {
     var gridElem = document.getElementById(gridObj.Id);
     var data = { DataSource: source };
-    var suc = function (res, gridDiv, ctls, gridObject) {        
+    var suc = function (res, gridDiv, ctls, gridObject) { 
+        ctls = (ctls.toLowerCase() === 'true');
+
         if (res.d) {
             gridObject.gridOptions = JSON.parse(res.d);
 

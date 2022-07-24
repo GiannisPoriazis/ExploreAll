@@ -52,16 +52,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Grid.cs" />
+    <Compile Include="MenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExploreAll.Common\ExploreAll.Common.csproj">
+      <Project>{0e63d808-cea8-452f-9f36-f6718aa80eff}</Project>
+      <Name>ExploreAll.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExploreAll.DB\ExploreAll.DB.csproj">
       <Project>{790e8330-5803-4ad5-9a31-0926833b836b}</Project>
       <Name>ExploreAll.DB</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\ExploreAll\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\ExploreAll\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />

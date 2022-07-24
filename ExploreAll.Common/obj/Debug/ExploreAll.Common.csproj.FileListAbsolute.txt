@@ -1,0 +1,6 @@
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\bin\Debug\ExploreAll.Common.dll
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\bin\Debug\ExploreAll.Common.pdb
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\obj\Debug\ExploreAll.Common.csproj.AssemblyReference.cache
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\obj\Debug\ExploreAll.Common.csproj.CoreCompileInputs.cache
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\obj\Debug\ExploreAll.Common.dll
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Common\obj\Debug\ExploreAll.Common.pdb

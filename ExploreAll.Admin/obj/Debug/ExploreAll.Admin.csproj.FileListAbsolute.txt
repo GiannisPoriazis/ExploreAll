@@ -66,3 +66,5 @@ C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\bin\CommandAsSql.x
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\obj\Debug\ExploreAll.Admin.csproj.CopyComplete
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\obj\Debug\ExploreAll.Admin.dll
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\obj\Debug\ExploreAll.Admin.pdb
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\bin\ExploreAll.Common.dll
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Admin\bin\ExploreAll.Common.pdb

@@ -90,3 +90,5 @@ C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\obj\Debug\ExploreAll.
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\obj\Debug\ExploreAll.UI.csproj.CopyComplete
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\obj\Debug\ExploreAll.UI.dll
 C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\obj\Debug\ExploreAll.UI.pdb
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\bin\Debug\ExploreAll.Common.dll
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.UI\bin\Debug\ExploreAll.Common.pdb

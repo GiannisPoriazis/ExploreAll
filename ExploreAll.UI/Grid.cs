@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
-using ExploreAll;
 using Newtonsoft.Json;
+using ExploreAll.Common;
 
 namespace ExploreAll.UI
 {
@@ -23,7 +23,7 @@ namespace ExploreAll.UI
         public string WrapperCssClass { get; set; }
         public string DataSource { get; set; }
         public bool Editable { get; set; }
-        public string Permission { get; set; }
+        public int Permission = (int)CommonHelper.eBoolValues.Ignore;
 
         protected HtmlGenericControl gridWrapper;
         protected HtmlGenericControl GridDiv;
@@ -34,7 +34,7 @@ namespace ExploreAll.UI
 
         protected override void CreateChildControls()
         {
-            if(!String.IsNullOrEmpty(Permission))
+            if(Permission != (int)CommonHelper.eBoolValues.Ignore)
             {
                 DataTable UserRoles = DBSupport.GetData("UserPermissions");
                 DataRow User = null;
@@ -48,7 +48,7 @@ namespace ExploreAll.UI
                     }
                 }
 
-                if (!(bool)User[Permission])
+                if (!(bool)User[CommonHelper.Permissions[Permission]])
                     Editable = false;
             }
 

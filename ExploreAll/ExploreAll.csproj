@@ -653,6 +653,7 @@
     <Content Include="public\css\icon_fonts\font\icon_set_1.ttf" />
     <Content Include="public\css\icon_fonts\font\icon_set_1.woff" />
     <Content Include="system\templates\base.Master" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
