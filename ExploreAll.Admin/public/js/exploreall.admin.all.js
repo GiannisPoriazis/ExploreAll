@@ -22,7 +22,8 @@ exploreall.setupGrid = function (source, controls, gridObj) {
             gridDiv.innerHTML = "";
             gridObject.gridOptions.components = {
                 fileUploaderComponent: FileUploaderComponent,
-                passwordFormatterComponent: PasswordFormatterComponent
+                passwordFormatterComponent: PasswordFormatterComponent,
+                checkboxRenderer: CheckboxRenderer
             };
 
             exploreall.selectEditorParams.find(x => x.key == "Role").values = gridObject.gridOptions.cellEditorParamValues;

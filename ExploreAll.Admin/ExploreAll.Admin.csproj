@@ -75,6 +75,7 @@
     <Content Include="GetImageSource.aspx" />
     <Content Include="Labels.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Permissions.aspx" />
     <Content Include="public\build\css\custom.css" />
     <Content Include="public\build\css\custom.min.css" />
     <Content Include="public\build\images\back_disabled.png" />
@@ -119,6 +120,7 @@
     <Content Include="public\images\product-pic.jpg" />
     <Content Include="public\images\slack.png" />
     <Content Include="public\images\switch.png" />
+    <Content Include="public\js\CheckboxRenderer.js" />
     <Content Include="public\js\exploreall.admin.all.js" />
     <Content Include="public\js\FileUploaderComponent.js" />
     <Content Include="public\js\PasswordFormatterComponent.js" />
@@ -755,6 +757,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Permissions.aspx.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Permissions.aspx.designer.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sights.aspx.cs">
