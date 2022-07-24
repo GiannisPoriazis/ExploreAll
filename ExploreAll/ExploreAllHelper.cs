@@ -72,7 +72,7 @@ namespace ExploreAll
         public static string GetImageSource(string FileName)
         {
             string fileUri = string.Empty;
-            string url = $"https://localhost:44320/GetImageSource.aspx?file={FileName}";
+            string url = $"http://localhost:44320/GetImageSource.aspx?file={FileName}";
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             request.AutomaticDecompression = DecompressionMethods.GZip;
