@@ -40,7 +40,8 @@
     <section class="header-video">
         <div id="hero_video">
             <div id="sub_content_in">
-                <h1>ΚΑΛΩΣ ΗΡΘΑΤΕ ΣΤΗ ΛΗΜΝΟ</h1>
+                <asp:Literal runat="server" ID="Welcome"></asp:Literal>
+                
                 <p>
                     ΒΡΕΙΤΕ ΟΤΙ ΑΝΑΖΗΤΑΤΕ ΣΤΟ ΝΗΣΙ ΤΟΥ ΗΦΑΙΣΤΟΥ
                 </p>
@@ -65,7 +66,7 @@
                 <a href="florence-must-see-map-listing.html">
                     <span>24</span>
                     <i class=" icon_set_1_icon-1"></i>
-                    <h3>Must see</h3>
+                    <asp:Literal runat="server" ID="Card1"></asp:Literal>
                     <p>
                         Pri melius fuisset at, pro legimus corpora no
                     </p>
