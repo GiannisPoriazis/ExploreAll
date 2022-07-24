@@ -30,6 +30,7 @@
     <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/exploreall.admin.all.js"></script>
     <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/FileUploaderComponent.js"></script>
     <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/PasswordFormatterComponent.js"></script>
+    <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/CheckboxRenderer.js"></script>
 
     <asp:ContentPlaceHolder ID="headContent" runat="server"></asp:ContentPlaceHolder>
 </head>
@@ -203,8 +204,16 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Account Management</a>
                                         <div id="submenu-6" class="collapse submenu" style="">
+<<<<<<< HEAD
                                             <ul class="nav flex-column">                                              
 
+=======
+                                            <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="UserAccounts.aspx">User Accounts</a>
+                                                </li>
+                                                <exploreall:MenuItem runat="server" Title="Permissions" Target="Permissions.aspx" Permission="1"></exploreall:MenuItem>
+>>>>>>> 28c4030632fe77c5bd48dff4c686af5b30a1dfdb
                                             </ul>
                                         </div>
                                     </li>
