@@ -64,11 +64,11 @@
         <div class="row box_cat">
             <div class="col-md-3 col-sm-6">
                 <a href="florence-must-see-map-listing.html">
-                    <span>24</span>
+                    <span>23</span>
                     <i class=" icon_set_1_icon-1"></i>
                     <asp:Literal runat="server" ID="Card1"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                       <asp:Literal runat="server" ID="Text1"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -76,9 +76,9 @@
                 <a href="florence-event-map-listing.html">
                     <span>34</span>
                     <i class="icon_set_1_icon-41"></i>
-                    <h3>Events</h3>
-                    <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                    <asp:Literal runat="server" ID="Card2"></asp:Literal>
+                    <p> 
+                      <asp:Literal runat="server" ID="Text2"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -86,9 +86,9 @@
                 <a href="florence-hotels-map-listing.html">
                     <span>12</span>
                     <i class="icon_set_1_icon-6"></i>
-                    <h3>Hotels </h3>
+                    <asp:Literal runat="server" ID="Card3"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                       <asp:Literal runat="server" ID="Text3"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -96,9 +96,9 @@
                 <a href="florence-restaurants-map-listing.html">
                     <span>43</span>
                     <i class="icon_set_1_icon-58"></i>
-                    <h3>Restaurants</h3>
+                    <asp:Literal runat="server" ID="Card4"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                       <asp:Literal runat="server" ID="Text4"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -108,11 +108,11 @@
         <div class="row box_cat">
             <div class="col-md-3 col-sm-6">
                 <a href="florence-bars-map-listing.html">
-                    <span>24</span>
+                    <span>23</span>
                     <i class="icon_set_1_icon-20"></i>
-                    <h3>Cocktail Bars</h3>
+                     <asp:Literal runat="server" ID="Card5"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no.
+                        <asp:Literal runat="server" ID="Text5"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -120,9 +120,9 @@
                 <a href="florence-shops-map-listing.html">
                     <span>34</span>
                     <i class="icon_set_1_icon-50"></i>
-                    <h3>Shops</h3>
+                     <asp:Literal runat="server" ID="Card6"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                       <asp:Literal runat="server" ID="Text6"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -130,9 +130,9 @@
                 <a href="florence-transports.html">
                     <span>43</span>
                     <i class="icon_set_1_icon-25"></i>
-                    <h3>Transport</h3>
+                     <asp:Literal runat="server" ID="Card7"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                        <asp:Literal runat="server" ID="Text7"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -140,9 +140,9 @@
                 <a href="faq.html">
                     <span>12</span>
                     <i class="icon_set_1_icon-54"></i>
-                    <h3>Info&amp;Faqs</h3>
+                     <asp:Literal runat="server" ID="Card8"></asp:Literal>
                     <p>
-                        Pri melius fuisset at, pro legimus corpora no
+                      <asp:Literal runat="server" ID="Text8"></asp:Literal>
                     </p>
                 </a>
             </div>
@@ -154,9 +154,9 @@
     <div class="pattern_dots">
         <div class="container margin_60_45">
             <div class="main_title">
-                <h2><strong>Most Viewed</strong> in TravelGuide</h2>
+                <asp:Literal runat="server" ID="Section1"></asp:Literal>
                 <p>
-                    Ne his postulant posidonium adversarium. Ius tollit tamquam indoctum ea, cu quo equidem perfecto adipiscing. Eu mel aliquid delenit. Recteque laboramus ea est, te qui eirmod similique.
+                   <asp:Literal runat="server" ID="Subsection1"></asp:Literal>
                 </p>
                 <span><em></em></span>
             </div>
@@ -373,7 +373,7 @@
                                     <p>
                                         Read more
                                     </p>
-                                </div>
+                                </div>>
                             </a>
                         </div>
                     </div>
@@ -393,9 +393,9 @@
     <section class="bg_white margin_60_30">
         <div class="container">
             <div class="main_title">
-                <h3>Other <strong>Popular</strong> from TravelGuide</h3>
+                <asp:Literal runat="server" ID="Section2"></asp:Literal>
                 <p>
-                    Ne his postulant posidonium adversarium. Ius tollit tamquam indoctum ea, cu quo equidem perfecto adipiscing. Eu mel aliquid delenit. Recteque laboramus ea est, te qui eirmod similique.
+                   <asp:Literal runat="server" ID="Subsection2"></asp:Literal>
                 </p>
                 <span><em></em></span>
             </div>
@@ -412,15 +412,15 @@
                     <section id="section-1">
                         <div class="row list_tabs">
                             <div class="col-md-4 col-sm-4">
-                                <h2>Must see and Events</h2>
+                                <asp:Literal runat="server" ID="Photos1"></asp:Literal>
                                 <ul>
                                     <li>
                                         <div>
                                             <a href="florence-must-see-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_1.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Michelangelo Sculpture</h3>
-                                                <small>Architectural Buildings</small>
+                                                  <asp:Literal runat="server" ID="Pic1"></asp:Literal>                                                
+                                                <asp:Literal runat="server" ID="Desc1"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
@@ -429,8 +429,8 @@
                                             <a href="florence-must-see-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_2.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Michelangelo Sculpture</h3>
-                                                <small>Museum - Attractions</small>
+                                                <asp:Literal runat="server" ID="Pic2"></asp:Literal>  
+                                                <asp:Literal runat="server" ID="Desc2"></asp:Literal>  
                                             </a>
                                         </div>
                                     </li>
@@ -439,8 +439,8 @@
                                             <a href="florence-event-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_3.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Museum Free Entrance</h3>
-                                                <small>Museums - Events</small>
+                                                <asp:Literal runat="server" ID="Pic3"></asp:Literal>  
+                                                <asp:Literal runat="server" ID="Desc3"></asp:Literal>  
                                             </a>
                                         </div>
                                     </li>
@@ -449,23 +449,23 @@
                                             <a href="florence-event-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_4.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Flea Market</h3>
-                                                <small>Attractions - Events</small>
+                                                 <asp:Literal runat="server" ID="Pic4"></asp:Literal>  
+                                                 <asp:Literal runat="server" ID="Desc4"></asp:Literal>  
                                             </a>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4">
-                                <h2>Eat and Drink</h2>
+                             <asp:Literal runat="server" ID="Photos2"></asp:Literal>  
                                 <ul>
                                     <li>
                                         <div>
                                             <a href="florence-restaurant-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_5.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Florence Pizza</h3>
-                                                <small>Pizza - Italian</small>
+                                                 <asp:Literal runat="server" ID="Pics1"></asp:Literal>  
+                                                 <asp:Literal runat="server" ID="Descs1"></asp:Literal>  
                                             </a>
                                         </div>
                                     </li>
@@ -474,8 +474,8 @@
                                             <a href="florence-restaurant-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_6.jpg" alt="" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Domenico</h3>
-                                                <small>International - Italian</small>
+                                                <asp:Literal runat="server" ID="Pics2"></asp:Literal>  
+                                                <asp:Literal runat="server" ID="Descs2"></asp:Literal>  
                                             </a>
                                         </div>
                                     </li>
@@ -484,8 +484,8 @@
                                             <a href="florence-bar-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_7.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3> Mojito Bar</h3>
-                                                <small>Cocktails Bar</small>
+                                               <asp:Literal runat="server" ID="Pics3"></asp:Literal>  
+                                               <asp:Literal runat="server" ID="Descs3"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
@@ -494,23 +494,23 @@
                                             <a href="florence-bar-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_8.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Alfredo Pub</h3>
-                                                <small>Pub</small>
+                                                 <asp:Literal runat="server" ID="Pics4"></asp:Literal>  
+                                               <asp:Literal runat="server" ID="Descs4"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4">
-                                <h2>Shops</h2>
+                                <asp:Literal runat="server" ID="Photos4"></asp:Literal>
                                 <ul>
                                     <li>
                                         <div>
                                             <a href="florence-shop-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_9.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Louis Vuitton</h3>
-                                                <small>Men - Women</small>
+                                                 <asp:Literal runat="server" ID="Img1"></asp:Literal>  
+                                                 <asp:Literal runat="server" ID="Descr1"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
@@ -519,8 +519,8 @@
                                             <a href="florence-shop-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_10.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Shopping Mall</h3>
-                                                <small>Men - Children</small>
+                                                   <asp:Literal runat="server" ID="Img2"></asp:Literal>  
+                                                 <asp:Literal runat="server" ID="Descr2"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
@@ -529,8 +529,8 @@
                                             <a href="florence-shop-detail.html">
                                                 <figure><img src="<%# ResolveClientUrl(@"~/")%>public/img/thumb_tabs_11.jpg" alt="thumb" class="img-rounded" width="60" height="60">
                                                 </figure>
-                                                <h3>Mario Shop</h3>
-                                                <small>Men - Women</small>
+                                                <asp:Literal runat="server" ID="Img3"></asp:Literal>  
+                                                 <asp:Literal runat="server" ID="Descr3"></asp:Literal>
                                             </a>
                                         </div>
                                     </li>
