@@ -34,8 +34,12 @@ exploreall.setupGrid = function (source, controls, gridObj) {
                     gridObject.gridOptions.columnDefs[i].cellEditorParams = {
                         values: cellEditorParams.values
                     }
-                if (!ctls)
+                if (!ctls) {
                     gridObject.gridOptions.columnDefs[i].editable = false;
+                    gridObject.gridOptions.columnDefs[i].hasControls = false;
+                } 
+                else 
+                    gridObject.gridOptions.columnDefs[i].hasControls = true;
             }
 
             for (var i = 0; i < gridObject.gridOptions.rowData.length; i++) {

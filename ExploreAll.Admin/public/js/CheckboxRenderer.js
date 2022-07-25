@@ -1,26 +1,34 @@
-﻿function CheckboxRenderer() { }
+﻿class CheckboxRenderer {
 
-CheckboxRenderer.prototype.init = function (params) {
-    this.params = params;
+    init(params) {
+        this.params = params;
 
-    this.eGui = document.createElement('input');
-    this.eGui.type = 'checkbox';
-    this.eGui.checked = params.value.toLowerCase() === 'true';
+        this.eGui = document.createElement('input');
+        this.eGui.type = 'checkbox';
+        this.eGui.checked = false;
 
-    this.checkedHandler = this.checkedHandler.bind(this);
-    this.eGui.addEventListener('click', this.checkedHandler);
-}
+        if (params.data[params.colDef.field]) {
+            if (params.value != 0 && params.value != 1)
+                this.eGui.checked = params.value.toLowerCase() === 'true';
+            else
+                this.eGui.checked = params.value == 0 ? false : true;
+        }
 
-CheckboxRenderer.prototype.checkedHandler = function (e) {
-    let checked = e.target.checked;
-    let colId = this.params.column.colId;
-    this.params.node.setDataValue(colId, checked);
-}
+        params.data[params.column.colId] = this.eGui.checked ? 1 : 0;
 
-CheckboxRenderer.prototype.getGui = function (params) {
-    return this.eGui;
-}
+        if (params.colDef.hasControls) {
+            this.eGui.addEventListener("click", function (e) {
+                let checked = e.target.checked;
+                let colId = params.column.colId;
+                params.data[colId] = checked ? 1 : 0;
+                console.log(params.data[colId]);
+            });
+        }
+        else
+            this.eGui.disabled = true;
+    }
 
-CheckboxRenderer.prototype.destroy = function (params) {
-    this.eGui.removeEventListener('click', this.checkedHandler);
+    getGui() {
+        return this.eGui;
+    }
 }

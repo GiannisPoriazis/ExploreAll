@@ -76,10 +76,10 @@ namespace ExploreAll
                 {
                     new GridColumn("Id", false, false, true, true),
                     new GridColumn("Role", true, true, false, false),
-                    new GridColumn("ManageAccounts", true, true, false, false, "Manage Accounts", CellRenderer: "checkboxRenderer"),
-                    new GridColumn("Accounts", true, true, false, false, "View Accounts", CellRenderer: "checkboxRenderer"),
-                    new GridColumn("ManageContent", true, true, false, false, "Manage Content", CellRenderer: "checkboxRenderer"),
-                    new GridColumn("ViewContent", true, true, false, false, "View Content", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("ManageAccounts", false, false, false, false, "Manage Accounts", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("Accounts", false, false, false, false, "View Accounts", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("EditContent", false, false, false, false, "Manage Content", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("ViewContent", false, false, false, false, "View Content", CellRenderer: "checkboxRenderer"),
                 }
             },
         };

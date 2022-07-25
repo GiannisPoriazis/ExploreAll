@@ -7,17 +7,20 @@
         this.eGui.style.border = "none";
         this.eGui.style.outline = "none";
         this.eGui.value = "";
-        if (params.data[params.colDef.field]) { 
+        if (params.data[params.colDef.field]) {
             for (var i = 0; i < params.data[params.colDef.field].length; i++) {
                 this.eGui.value += '*';
             }
         }
 
-        this.eGui.addEventListener("dblclick", function (e) {
-            e.target.removeAttribute("readonly");
-            e.target.value = "";
-            e.target.focus();
-        });
+        if (params.colDef.hasControls) {
+            this.eGui.addEventListener("dblclick", function (e) {
+                e.target.removeAttribute("readonly");
+                e.target.value = "";
+                e.target.focus();
+            });
+        }
+
         this.eGui.addEventListener("change", function (e) {
             params.data[params.column.colId] = e.target.value;
             e.target.blur();
