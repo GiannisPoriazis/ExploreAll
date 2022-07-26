@@ -195,6 +195,7 @@
                                             <ul class="nav flex-column">
                                                 <exploreall:MenuItem runat="server" Title="Labels" Target="Labels.aspx" Permission="3"></exploreall:MenuItem>
                                                 <exploreall:MenuItem runat="server" Title="Sights" Target="Sights.aspx" Permission="3"></exploreall:MenuItem>
+                                                <exploreall:MenuItem runat="server" Title="Store Management" Target="StoreManagement.aspx" Permission="3"></exploreall:MenuItem>
                                             </ul>
                                         </div>
                                     </li>

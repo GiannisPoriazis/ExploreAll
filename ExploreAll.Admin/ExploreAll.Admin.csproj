@@ -722,6 +722,7 @@
     <Content Include="public\vendor\vector-map\jqvmap.css" />
     <Content Include="Sights.aspx" />
     <Content Include="signout.aspx" />
+    <Content Include="StoreManagement.aspx" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -779,6 +780,13 @@
     </Compile>
     <Compile Include="signout.aspx.designer.cs">
       <DependentUpon>signout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreManagement.aspx.cs">
+      <DependentUpon>StoreManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreManagement.aspx.designer.cs">
+      <DependentUpon>StoreManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="system\template\base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>
