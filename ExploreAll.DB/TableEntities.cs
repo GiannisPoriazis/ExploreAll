@@ -82,6 +82,20 @@ namespace ExploreAll
                     new GridColumn("ViewContent", false, false, false, false, "View Content", CellRenderer: "checkboxRenderer"),
                 }
             },
+            {"StoresTable", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Title", true, true, false, false),
+                    new GridColumn("Street", true, true, false, false),
+                    new GridColumn("City", true, true, false, false),
+                    new GridColumn("Zip", true, true, false, false),
+                    new GridColumn("Country", false, false, false, false),
+                    new GridColumn("Lat", true, true, false, false),
+                    new GridColumn("Long", true, true, false, false),
+                    new GridColumn("Thumbnail", false, false, false, false, CellRenderer: "fileUploaderComponent", CellRendererParams: null),
+                    new GridColumn("AccountId", true, true, false, false, "Cust. Account")
+                }
+            }
         };
     }
 }
