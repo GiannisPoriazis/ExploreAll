@@ -89,7 +89,7 @@ namespace ExploreAll_Admin
                                 var columnProperties = TableEntities.TableColumns[dataSource].FirstOrDefault(x => x.field == columns[l]);
                                 if (columnProperties.hide)
                                     continue;
-                                cmd.Parameters.AddWithValue($"@{i}{l}", rowData[columns[l]].ToString());
+                                cmd.Parameters.AddWithValue($"@{i}{l}", rowData[columns[l]] != null ? rowData[columns[l]].ToString() : "");
                             }
                             data.Remove(rowData);
                         }
@@ -154,7 +154,7 @@ namespace ExploreAll_Admin
                         for (int i = 0; i < data.Count; i++)
                         {
                             cmd.Parameters.AddWithValue($"@{l}{i}id", (int)data[i]["Id"]);
-                            cmd.Parameters.AddWithValue($"@{l}{i}value", data[i][columns[l]].ToString());
+                            cmd.Parameters.AddWithValue($"@{l}{i}value", data[i][columns[l]] != null ? data[i][columns[l]].ToString() : "");
                         }
                     }
 

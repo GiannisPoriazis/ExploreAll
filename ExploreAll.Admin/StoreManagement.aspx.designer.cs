@@ -15,12 +15,12 @@ namespace ExploreAll.Admin
     {
 
         /// <summary>
-        /// UserGrid control.
+        /// StoresGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ExploreAll.UI.Grid UserGrid;
+        protected global::ExploreAll.UI.Grid StoresGrid;
     }
 }

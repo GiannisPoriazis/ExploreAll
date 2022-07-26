@@ -11,6 +11,7 @@ namespace ExploreAll_Admin.system.template
 {
     public partial class _base : System.Web.UI.MasterPage
     {
+        public string User = HttpContext.Current.Session["User"].ToString();
         protected override void OnInit(EventArgs e)
         {
             base.OnInit(e);

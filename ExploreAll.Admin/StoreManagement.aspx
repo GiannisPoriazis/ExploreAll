@@ -2,9 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="headContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContent" runat="server">
-    <exploreall:Grid runat="server" DataSource="UserTable" Editable="true" Permission="2" GridStyle="alpine" ID="UserGrid" WrapperCssClass="FullWidth Controls"></exploreall:Grid>
+    <exploreall:Grid runat="server" DataSource="StoresTable" Editable="true" Permission="2" GridStyle="alpine" ID="StoresGrid" WrapperCssClass="FullWidth Controls"></exploreall:Grid>
+    <input id="FileUploader" type="file" hidden/>
     <script>
-        pageTitle = "Store Management";
+        pageTitle = "Stores";
         pagePath = "Content";
     </script>
 </asp:Content>
