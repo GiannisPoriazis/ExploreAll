@@ -760,24 +760,24 @@
                 <div class="col-md-3 col-sm-4">
                     <asp:Literal runat="server" ID="LinkHeader"></asp:Literal>
                     <ul>
-                        <li><a href="#0"><asp:Literal runat="server" ID="Link1"></asp:Literal></a>
+                        <li><a href="0"><asp:Literal runat="server" ID="Link1"></asp:Literal></a>
                         </li>
-                        <li><a href="#0">Faq</a>
+                        <li><a href="0"><asp:Literal runat="server" ID="Link2"></asp:Literal></a>
                         </li>
-                        <li><a href="#0">Contacts</a>
+                        <li><a href="0"<asp:Literal runat="server" ID="Link3"></asp:Literal></a>
                         </li>
-                        <li><a href="#0">Login</a>
+                        <li><a href="0"><asp:Literal runat="server" ID="Link4"></asp:Literal></a>
                         </li>
-                        <li><a href="#0">Register</a>
+                        <li><a href="0"><asp:Literal runat="server" ID="Link5"></asp:Literal></a>
                         </li>
-                        <li><a href="#0">Terms and conditions</a>
+                        <li><a href="0"><asp:Literal runat="server" ID="Link6"></asp:Literal></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-4" id="newsletter">
-                    <h3>Newsletter</h3>
+                      <asp:Literal runat="server" ID="Footer2"></asp:Literal>
                     <p>
-                        Join our newsletter to keep be informed about offers and news.
+                        <asp:Literal runat="server" ID="FooterText2"></asp:Literal>
                     </p>
                     <div id="message-newsletter_2">
                     </div>
@@ -791,7 +791,7 @@
                     </form>
                 </div>
                 <div class="col-md-2 col-sm-4">
-                    <h3>Settings</h3>
+                     <asp:Literal runat="server" ID="Language"></asp:Literal>
                     <div class="styled-select">
                         <select class="form-control" name="lang" id="lang">
                             <option value="English" selected>English</option>
@@ -806,7 +806,7 @@
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    © TravelGuide 2016 - All Rights Reserved
+                   <asp:Literal runat="server" ID="Subfooter"></asp:Literal>
                 </div>
                 <div class="col-sm-6">
                     <div id="social_footer">

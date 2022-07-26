@@ -198,6 +198,33 @@ namespace ExploreAll
                 case "Link1":
                     Link1.Text = data["Value"].ToString();
                     break;
+                case "Link2":
+                    Link2.Text = data["Value"].ToString();
+                    break;
+                case "Link3":
+                    Link3.Text = data["Value"].ToString();
+                    break;
+                case "Link4":
+                    Link4.Text = data["Value"].ToString();
+                    break;
+                case "Link5":
+                    Link5.Text = data["Value"].ToString();
+                    break;
+                case "Link6":
+                    Link6.Text = data["Value"].ToString();
+                    break;
+                case "Footer2":
+                    Footer2.Text = data["Value"].ToString();
+                    break;
+                case "FooterText2":
+                    FooterText2.Text = data["Value"].ToString();
+                    break;
+                case "Language":
+                    Language.Text = data["Value"].ToString();
+                    break;
+                case "SubFooter":
+                    Subfooter.Text = data["Value"].ToString();
+                    break;
                 default:
                     break;
 
