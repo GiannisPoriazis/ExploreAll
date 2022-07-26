@@ -165,6 +165,39 @@ namespace ExploreAll
                 case "Descr3":
                     Descr3.Text = data["Value"].ToString();
                     break;
+                case "Section3":
+                    Section3.Text = data["Value"].ToString();
+                    break;
+                case "SubCard1":
+                    SubCard1.Text = data["Value"].ToString();
+                    break;
+                case "SubText1":
+                    SubText1.Text = data["Value"].ToString();
+                    break;
+                case "SubCard2":
+                    SubCard2.Text = data["Value"].ToString();
+                    break;
+                case "SubText2":
+                    SubText2.Text = data["Value"].ToString();
+                    break;
+                case "SubCard3":
+                    SubCard3.Text = data["Value"].ToString();
+                    break;
+                case "SubText3":
+                    SubText3.Text = data["Value"].ToString();
+                    break;
+                case "Footer1":
+                    Footer1.Text = data["Value"].ToString();
+                    break;
+                case "FooterText1":
+                    FooterText1.Text = data["Value"].ToString();
+                    break;
+                case "LinkHeader":
+                    LinkHeader.Text = data["Value"].ToString();
+                    break;
+                case "Link1":
+                    Link1.Text = data["Value"].ToString();
+                    break;
                 default:
                     break;
 

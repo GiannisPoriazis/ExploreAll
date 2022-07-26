@@ -668,33 +668,33 @@
     <section class="parallax_window_home bright">
         <div class="container">
             <div class="main_title">
-                <h3>How TravelGuide <strong>Works</strong></h3>
+                <asp:Literal runat="server" ID="Section3"></asp:Literal>
             </div>
             <div class="row features add_bottom_45">
                 <div class="col-sm-4">
                     <div id="feat_2">
                         <a href="about.html" class="bt_info">Read more</a>
-                        <h3>Find places</h3>
+                       <asp:Literal runat="server" ID="SubCard1"></asp:Literal>
                         <p>
-                            The most interesting place close to you. Attractions, Museums, Restaurant...
+                             <asp:Literal runat="server" ID="SubText1"></asp:Literal>
                         </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div id="feat_1">
                         <a href="about.html" class="bt_info">Read more</a>
-                        <h3>Get info&amp;tips</h3>
+                         <asp:Literal runat="server" ID="SubCard2"></asp:Literal>
                         <p>
-                            The most important tips on your Mobile during a visit....online and offline.
+                            <asp:Literal runat="server" ID="SubText2"></asp:Literal>
                         </p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div id="feat_3">
                         <a href="about.html" class="bt_info">Read more</a>
-                        <h3>Read and listen</h3>
+                        <asp:Literal runat="server" ID="SubCard3"></asp:Literal>
                         <p>
-                            The most important info about a place reviewed by Quality Authors.
+                            <asp:Literal runat="server" ID="SubText3"></asp:Literal>
                         </p>
                     </div>
                 </div>
@@ -752,15 +752,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <h3>About us</h3>
-                    <p>Dolorem nusquam molestie ut mei, ut sit dico omnis. Cu quod congue has, at sumo esse viderer mea. Id assum saperet definitiones qui.</p>
+                    <asp:Literal runat="server" ID="Footer1"></asp:Literal>
+                    <p><asp:Literal runat="server" ID="FooterText1"></asp:Literal></p>
                     <p><img src="<%# ResolveClientUrl(@"~/")%>public/img/logo_2.png" alt="img" class="hidden-xs" width="170" height="30" data-retina="true">
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-4">
-                    <h3>About</h3>
+                    <asp:Literal runat="server" ID="LinkHeader"></asp:Literal>
                     <ul>
-                        <li><a href="#0">About us</a>
+                        <li><a href="#0"><asp:Literal runat="server" ID="Link1"></asp:Literal></a>
                         </li>
                         <li><a href="#0">Faq</a>
                         </li>
