@@ -27,6 +27,7 @@ namespace ExploreAll_Admin
                 if (dr["Username"].ToString() == username && dr["Password"].ToString() == password)
                 {
                     ses["Role"] = dr["Role"];
+                    ses["User"] = dr["Username"];
                     res = true;
                 }
             }

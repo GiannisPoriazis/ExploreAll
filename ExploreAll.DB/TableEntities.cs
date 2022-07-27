@@ -19,8 +19,9 @@ namespace ExploreAll
             public string cellRenderer { get; set; }
             public string cellRendererParams { get; set; }
             public string cellEditor { get; set; }
+            public string valueFormatter { get; set; }
 
-            public GridColumn(string Field, bool Editable, bool Filter, bool Hide, bool SuppressToolPanel, string HeaderName = null, string CellRenderer = null, string CellRendererParams = null, string CellEditor = null)
+            public GridColumn(string Field, bool Editable, bool Filter, bool Hide, bool SuppressToolPanel, string HeaderName = null, string CellRenderer = null, string CellRendererParams = null, string CellEditor = null, string ValueFormatter = null)
             {
                 field = Field;
                 editable = Editable;
@@ -36,6 +37,7 @@ namespace ExploreAll
                 cellRenderer = CellRenderer;
                 cellRendererParams = CellRendererParams;
                 cellEditor = CellEditor;
+                valueFormatter = ValueFormatter;
             }
         }
 
@@ -82,6 +84,20 @@ namespace ExploreAll
                     new GridColumn("ViewContent", false, false, false, false, "View Content", CellRenderer: "checkboxRenderer"),
                 }
             },
+            {"StoresTable", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Title", true, true, false, false),
+                    new GridColumn("Street", true, true, false, false),
+                    new GridColumn("City", true, true, false, false),
+                    new GridColumn("Zip", true, true, false, false),
+                    new GridColumn("Country", false, false, false, false, ValueFormatter: "Country"),
+                    new GridColumn("Lat", true, true, false, false),
+                    new GridColumn("Long", true, true, false, false),
+                    new GridColumn("Thumbnail", false, false, false, false, CellRenderer: "fileUploaderComponent", CellRendererParams: null),
+                    new GridColumn("AccountId", true, true, false, false, "Cust. Account")
+                }
+            }
         };
     }
 }

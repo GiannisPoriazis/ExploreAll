@@ -725,6 +725,7 @@
     <Content Include="StoreManagement.aspx" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />
+    <Content Include="CustomerAccounts.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Default.aspx.cs">
@@ -801,6 +802,13 @@
     </Compile>
     <Compile Include="UserAccounts.aspx.designer.cs">
       <DependentUpon>UserAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerAccounts.aspx.cs">
+      <DependentUpon>CustomerAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAccounts.aspx.designer.cs">
+      <DependentUpon>CustomerAccounts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

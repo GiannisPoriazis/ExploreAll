@@ -7,6 +7,11 @@ exploreall.selectEditorParams = [
     }
 ];
 
+exploreall.hostCountries = {
+    "limnos.exploreall.gr": "Greece",
+    "localhost": "Greece"
+}
+
 exploreall.setupGrid = function (source, controls, gridObj) {
     var gridElem = document.getElementById(gridObj.Id);
     var data = { DataSource: source };
@@ -34,6 +39,9 @@ exploreall.setupGrid = function (source, controls, gridObj) {
                     gridObject.gridOptions.columnDefs[i].cellEditorParams = {
                         values: cellEditorParams.values
                     }
+                if (gridObject.gridOptions.columnDefs[i].valueFormatter) {
+                    gridObject.gridOptions.columnDefs[i].valueFormatter = exploreall.countryFormatter;
+                }
                 if (!ctls) {
                     gridObject.gridOptions.columnDefs[i].editable = false;
                     gridObject.gridOptions.columnDefs[i].hasControls = false;
@@ -192,4 +200,12 @@ exploreall.notify = function (msg, error = false) {
     setTimeout(function () {
         notifWrapper.remove();
     }, 4000);
+}
+
+exploreall.countryFormatter = function (params) {
+    console.log(params);
+    switch (params.colDef.field) {
+        case "Country":
+            return exploreall.hostCountries[window.location.hostname];
+    }
 }

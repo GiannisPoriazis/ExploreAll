@@ -11,16 +11,16 @@ namespace ExploreAll.Admin
 {
 
 
-    public partial class StoreManagement
+    public partial class WebForm1
     {
 
         /// <summary>
-        /// StoresGrid control.
+        /// CustomersGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ExploreAll.UI.Grid StoresGrid;
+        protected global::ExploreAll.UI.Grid CustomersGrid;
     }
 }
