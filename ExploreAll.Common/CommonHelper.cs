@@ -13,7 +13,9 @@ namespace ExploreAll.Common
             { 0, "ManageAccounts" },
             { 1, "Accounts" },
             { 2, "EditContent" },
-            { 3, "ViewContent" }
+            { 3, "ViewContent" },
+            { 4, "EditResources" },
+            { 5, "ViewSetup" }
         };
 
         public enum eBoolValues
