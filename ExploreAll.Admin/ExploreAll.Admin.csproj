@@ -111,6 +111,7 @@
     <Content Include="public\images\eco-slider-img-2.png" />
     <Content Include="public\images\eco-slider-img-3.png" />
     <Content Include="public\images\error-img.png" />
+    <Content Include="public\images\Exploreall.png" />
     <Content Include="public\images\github.png" />
     <Content Include="public\images\loader.svg" />
     <Content Include="public\images\logo.png" />
