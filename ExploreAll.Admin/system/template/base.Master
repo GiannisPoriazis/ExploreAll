@@ -195,11 +195,7 @@
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-table"></i>Setup</a>
                                         <div id="submenu-7" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
-<<<<<<< HEAD
-                                                <exploreall:MenuItem runat="server" Title="Translation Management" Target="LanguageResources.aspx" Permission="1"></exploreall:MenuItem>
-=======
-                                                <%-- Section Links --%>
->>>>>>> 1e763f0a4cea78c3401f96a99b2ab90d30fda121
+                                                <exploreall:MenuItem runat="server" Title="Translation Management" Target="LanguageResources.aspx" Permission="5 "></exploreall:MenuItem>
                                             </ul>
                                         </div>
                                     </li>

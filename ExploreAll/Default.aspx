@@ -64,7 +64,7 @@
         <div class="row box_cat">
             <div class="col-md-3 col-sm-6">
                 <a href="florence-must-see-map-listing.html">
-                    <span>23</span>
+                   <asp:Literal runat="server" ID="Number1"></asp:Literal>
                     <i class=" icon_set_1_icon-1"></i>
                     <asp:Literal runat="server" ID="Card1"></asp:Literal>
                     <p>
@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="florence-event-map-listing.html">
-                    <span>34</span>
+                   <asp:Literal runat="server" ID="Number2"></asp:Literal>
                     <i class="icon_set_1_icon-41"></i>
                     <asp:Literal runat="server" ID="Card2"></asp:Literal>
                     <p> 
@@ -84,7 +84,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="florence-hotels-map-listing.html">
-                    <span>12</span>
+                     <asp:Literal runat="server" ID="Number3"></asp:Literal>
                     <i class="icon_set_1_icon-6"></i>
                     <asp:Literal runat="server" ID="Card3"></asp:Literal>
                     <p>
@@ -94,7 +94,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="florence-restaurants-map-listing.html">
-                    <span>43</span>
+                    <asp:Literal runat="server" ID="Number4"></asp:Literal>
                     <i class="icon_set_1_icon-58"></i>
                     <asp:Literal runat="server" ID="Card4"></asp:Literal>
                     <p>
@@ -108,7 +108,7 @@
         <div class="row box_cat">
             <div class="col-md-3 col-sm-6">
                 <a href="florence-bars-map-listing.html">
-                    <span>23</span>
+                    <asp:Literal runat="server" ID="Number5"></asp:Literal>
                     <i class="icon_set_1_icon-20"></i>
                      <asp:Literal runat="server" ID="Card5"></asp:Literal>
                     <p>
@@ -118,7 +118,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="florence-shops-map-listing.html">
-                    <span>34</span>
+                    <asp:Literal runat="server" ID="Number6"></asp:Literal>
                     <i class="icon_set_1_icon-50"></i>
                      <asp:Literal runat="server" ID="Card6"></asp:Literal>
                     <p>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="florence-transports.html">
-                    <span>43</span>
+                    <asp:Literal runat="server" ID="Number7"></asp:Literal>
                     <i class="icon_set_1_icon-25"></i>
                      <asp:Literal runat="server" ID="Card7"></asp:Literal>
                     <p>
@@ -138,7 +138,7 @@
             </div>
             <div class="col-md-3 col-sm-6">
                 <a href="faq.html">
-                    <span>12</span>
+                    <asp:Literal runat="server" ID="Number8"></asp:Literal>
                     <i class="icon_set_1_icon-54"></i>
                      <asp:Literal runat="server" ID="Card8"></asp:Literal>
                     <p>
