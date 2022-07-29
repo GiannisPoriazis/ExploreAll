@@ -19,17 +19,17 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300" rel="stylesheet" type="text/css">
 
     <!-- BASE CSS -->
-    <link href="<%# ResolveClientUrl(@"~/")%>css/animate.min.css" rel="stylesheet">
-    <link href="<%# ResolveClientUrl(@"~/")%>css/bootstrap.min.css" rel="stylesheet">
-    <link href="<%# ResolveClientUrl(@"~/")%>css/style.css" rel="stylesheet">
-    <link href="<%# ResolveClientUrl(@"~/")%>css/menu.css" rel="stylesheet">
-    <link href="<%# ResolveClientUrl(@"~/")%>css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/animate.min.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/style.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/menu.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
 
     <!-- SPECIFIC CSS -->
-    <link href="<%# ResolveClientUrl(@"~/")%>css/ion.rangeSlider.min.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/ion.rangeSlider.min.css" rel="stylesheet">
     
     <!-- YOUR CUSTOM CSS -->
-    <link href="<%# ResolveClientUrl(@"~/")%>css/custom.css" rel="stylesheet">
+    <link href="<%# ResolveClientUrl(@"~/")%>public/css/custom.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
@@ -52,7 +52,7 @@
         <div class="container-fluid">
              <div class="row">
                 <div class="col--md-4 col-sm-3 col-xs-4">
-                    <a href="index.html" id="logo"><img src="img/logo.png" width="170" height="30" alt="" data-retina="true">
+                    <a href="index.html" id="logo"><img src="<%# ResolveClientUrl(@"~/")%>img/logo.png" width="170" height="30" alt="" data-retina="true">
                     </a>
                 </div>
                  <nav class="col--md-8 col-sm-9 col-xs-8">
@@ -80,7 +80,7 @@
                     <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span>Menu mobile</span></a>
                     <div class="main-menu">
                         <div id="header_menu">
-                            <img src="img/logo_2.png" alt="img" data-retina="true" width="170" height="30">
+                            <img src="<%# ResolveClientUrl(@"~/")%>img/logo_2.png" alt="img" data-retina="true" width="170" height="30">
                         </div>
                         <a href="#" class="open_close" id="close_in"><i class="icon_close"></i></a>
                         <ul>
@@ -191,11 +191,11 @@
     <!-- End Header =============================================== -->
 
     <!-- SubHeader =============================================== -->
-    <section class="parallax_window_in" data-parallax="scroll" data-image-src="img/sub_header_florence_2.jpg" data-natural-width="1400" data-natural-height="420">
+    <section class="parallax_window_in" data-parallax="scroll" data-image-src="<%# ResolveClientUrl(@"~/")%>img/sub_header_florence_2.jpg" data-natural-width="1400" data-natural-height="420">
         <div id="sub_content_in">
-            <h1>TravelGuide Wishlist</h1>
+            <asp:Literal runat="server" ID="HeadTitle"></asp:Literal>
             <p>
-                "All what needs to a traveler in Florence...Easly find places, guides, directions, info...."
+                <asp:Literal runat="server" ID="SubTitle"></asp:Literal>
             </p>
         </div>
         <!-- End sub_content -->
@@ -206,11 +206,11 @@
     <div id="position">
         <div class="container">
             <ul>
-                <li><a href="#">Home</a>
+                <li><asp:Literal runat="server" ID="HeadLink1"></asp:Literal>
                 </li>
-                <li><a href="#">Category</a>
+                <li><asp:Literal runat="server" ID="HeadLink2"></asp:Literal>
                 </li>
-                <li>Page active</li>
+                <li><asp:Literal runat="server" ID="HeadLink3"></asp:Literal>
             </ul>
         </div>
     </div>
@@ -303,7 +303,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_1.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_1.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.30 min</small>
                                             <h3>Duomo Cathedral</h3>
@@ -319,9 +319,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Don't miss a famous cathedral"</h4>
+                                <asp:Literal runat="server" ID="ContentOne"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                    <asp:Literal runat="server" ID="SubContent1"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -351,7 +351,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_2.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_2.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.30 min</small>
                                             <h3>Santa Maria Novella</h3>
@@ -367,9 +367,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Quo aeterno legimus insolens"</h4>
+                                <asp:Literal runat="server" ID="ContentTwo"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                    <asp:Literal runat="server" ID="SubContent2"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -399,7 +399,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_3.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_3.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.10 min</small>
                                             <h3>Uffizi Gallery</h3>
@@ -415,9 +415,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Quo aeterno legimus insolens"</h4>
+                                <asp:Literal runat="server" ID="ContentThree"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                    <asp:Literal runat="server" ID="SubContent3"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -447,7 +447,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_4.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_4.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.30 min</small>
                                             <h3>Piazza della Signoria</h3>
@@ -463,9 +463,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Quo aeterno legimus insolens"</h4>
+                                <asp:Literal runat="server" ID="ContentFour"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                     <asp:Literal runat="server" ID="SubContent4"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -495,7 +495,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_5.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_5.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.30 min</small>
                                             <h3>Ponte Vecchio</h3>
@@ -543,7 +543,7 @@
                                 <!-- End tools i-->
                                 <div class="img_container">
                                     <a href="florence-must-see-detail.html">
-                                        <img src="img/must_see_list_6.jpg" width="800" height="533" class="img-responsive" alt="">
+                                        <img src="<%# ResolveClientUrl(@"~/")%>img/must_see_list_6.jpg" width="800" height="533" class="img-responsive" alt="">
                                         <div class="short_info">
                                             <small>1.30 min</small>
                                             <h3>Duomo Cathedral</h3>
@@ -644,7 +644,7 @@
                 <div class="col-md-4 col-sm-12">
                     <h3>About us</h3>
                     <p>Dolorem nusquam molestie ut mei, ut sit dico omnis. Cu quod congue has, at sumo esse viderer mea. Id assum saperet definitiones qui.</p>
-                    <p><img src="img/logo_2.png" alt="img" class="hidden-xs" width="170" height="30" data-retina="true">
+                    <p><img src="<%# ResolveClientUrl(@"~/")%>img/logo_2.png" alt="img" class="hidden-xs" width="170" height="30" data-retina="true">
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-4">
@@ -723,19 +723,19 @@
     <!-- End Footer =============================================== -->
 
     <!-- COMMON SCRIPTS -->
-    <script src="<%# ResolveClientUrl(@"~/")%>js/jquery-2.2.4.min.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/common_scripts_min.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>assets/validate.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/functions.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/jquery-2.2.4.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/common_scripts_min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/assets/validate.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/functions.js"></script>
 
     <!-- SPECIFIC SCRIPTS -->
-    <script src="<%# ResolveClientUrl(@"~/")%>js/raphael-2.1.4.min.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/justgage.min.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/score.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/ion.rangeSlider.min.js"></script>
-    <script src="<%# ResolveClientUrl(@"~/")%>js/switchery.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/raphael-2.1.4.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/justgage.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/score.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/ion.rangeSlider.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/switchery.min.js"></script>
     <!-- Fixed sidebar + Input Range + Carousel + Switch + Wishlist close-->
-    <script src="<%# ResolveClientUrl(@"~/")%>js/theia-sticky-sidebar.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>public/js/theia-sticky-sidebar.min.js"></script>
     <script>
         'use strict';
         jQuery('#sidebar').theiaStickySidebar({
