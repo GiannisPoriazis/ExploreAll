@@ -224,51 +224,51 @@
                         <a data-toggle="collapse" href="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters" id="filters_col_bt">Filters </a>
                         <div class="collapse" id="collapseFilters">
                             <div class="filter_type">
-                                <h6>Duration</h6>
+                                <asp:Literal runat="server" ID="FilterSlider"></asp:Literal>
                                 <input type="text" id="range" name="range" value="">
                             </div>
                             <div class="filter_type">
-                                <h6>Review score</h6>
+                                <asp:Literal runat="server" ID="FilterSet1"></asp:Literal>
                                 <ul>
                                     <li>
-                                        <label>Superb: 9+ (77)</label>
+                                         <asp:Literal runat="server" ID="Filter1"></asp:Literal>
                                         <input type="checkbox" class="js-switch" checked>
                                     </li>
                                     <li>
-                                        <label>Very good: 8+ (552)</label>
+                                        <asp:Literal runat="server" ID="Filter2"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                     <li>
-                                        <label>Good: 7+ (909)</label>
+                                        <asp:Literal runat="server" ID="Filter3"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                     <li>
-                                        <label>Pleasant: 6+ (1196)</label>
+                                        <asp:Literal runat="server" ID="Filter4"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                     <li>
-                                        <label>No rating (198)</label>
+                                        <asp:Literal runat="server" ID="Filter5"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                 </ul>
                             </div>
                             <div class="filter_type">
-                                <h6>Type</h6>
+                                <asp:Literal runat="server" ID="FilterSet2"></asp:Literal>
                                 <ul>
                                     <li>
-                                        <label>Historic (77)</label>
+                                         <asp:Literal runat="server" ID="Filter6"></asp:Literal>
                                         <input type="checkbox" class="js-switch" checked>
                                     </li>
                                     <li>
-                                        <label>Monumets (552)</label>
+                                         <asp:Literal runat="server" ID="Filter7"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                     <li>
-                                        <label>Interesting (909)</label>
+                                         <asp:Literal runat="server" ID="Filter8"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                     <li>
-                                        <label>Architectural (1196)</label>
+                                         <asp:Literal runat="server" ID="Filter9"></asp:Literal>
                                         <input type="checkbox" class="js-switch">
                                     </li>
                                 </ul>
@@ -511,9 +511,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Quo aeterno legimus insolens"</h4>
+                                <asp:Literal runat="server" ID="ContentFive"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                    <asp:Literal runat="server" ID="SubContent5"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -559,9 +559,9 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="desc">
-                                <h4>"Quo aeterno legimus insolens"</h4>
+                               <asp:Literal runat="server" ID="ContentSix"></asp:Literal>
                                 <p>
-                                    Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+                                    <asp:Literal runat="server" ID="SubContent6"></asp:Literal>
                                 </p>
                                 <p><a href="florence-must-see-detail.html" class="button small">Read more</a>
                                 </p>
@@ -580,54 +580,54 @@
 
     <div class="bg_white">
         <div class="container margin_60_30">
-            <h3 class="second_title">View other categories</h3>
+            <asp:Literal runat="server" ID="Categories"></asp:Literal>
             <div class="carousel box_cat small">
                 <div>
                     <a href="florence-must-see-grid.html">
                         <i class=" icon_set_1_icon-1"></i>
-                        <h3>Must see</h3>
+                         <asp:Literal runat="server" ID="Tab1"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-events-grid.html">
                         <i class="icon_set_1_icon-41"></i>
-                        <h3>Events</h3>
+                         <asp:Literal runat="server" ID="Tab2"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-transports.html">
                         <i class="icon_set_1_icon-25"></i>
-                        <h3>Transport</h3>
+                         <asp:Literal runat="server" ID="Tab3"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-restaurants-grid.html">
                         <i class="icon_set_1_icon-58"></i>
-                        <h3>Restaurants</h3>
+                         <asp:Literal runat="server" ID="Tab4"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-hotels-grid.html">
                         <i class="icon_set_1_icon-6"></i>
-                        <h3>Hotels </h3>
+                         <asp:Literal runat="server" ID="Tab5"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-bars-grid.html">
                         <i class="icon_set_1_icon-20"></i>
-                        <h3>Cocktail Bars</h3>
+                         <asp:Literal runat="server" ID="Tab6"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="florence-shops-grid.html">
                         <i class="icon_set_1_icon-50"></i>
-                        <h3>Shops</h3>
+                         <asp:Literal runat="server" ID="Tab7"></asp:Literal>
                     </a>
                 </div>
                 <div>
                     <a href="faq.html">
                         <i class="icon_set_1_icon-54"></i>
-                        <h3>Info&amp;Faqs</h3>
+                         <asp:Literal runat="server" ID="Tab8"></asp:Literal>
                     </a>
                 </div>
             </div>
@@ -642,32 +642,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-                    <h3>About us</h3>
-                    <p>Dolorem nusquam molestie ut mei, ut sit dico omnis. Cu quod congue has, at sumo esse viderer mea. Id assum saperet definitiones qui.</p>
+                    <asp:Literal runat="server" ID="StoresFooter1"></asp:Literal> 
+                     <p> <asp:Literal runat="server" ID="StoresSubFooter1"></asp:Literal> </p>
                     <p><img src="<%# ResolveClientUrl(@"~/")%>img/logo_2.png" alt="img" class="hidden-xs" width="170" height="30" data-retina="true">
                     </p>
                 </div>
                 <div class="col-md-3 col-sm-4">
-                    <h3>About</h3>
+                    <asp:Literal runat="server" ID="StoresLinks"></asp:Literal>
                     <ul>
-                        <li><a href="#0">About us</a>
+                        <li><asp:Literal runat="server" ID="StoresLink1"></asp:Literal>
                         </li>
-                        <li><a href="#0">Faq</a>
+                        <li><asp:Literal runat="server" ID="StoresLink2"></asp:Literal>
                         </li>
-                        <li><a href="#0">Contacts</a>
+                        <li><asp:Literal runat="server" ID="StoresLink3"></asp:Literal>
                         </li>
-                        <li><a href="#0">Login</a>
+                        <li><asp:Literal runat="server" ID="StoresLink4"></asp:Literal>
                         </li>
-                        <li><a href="#0">Register</a>
+                        <li><asp:Literal runat="server" ID="StoresLink5"></asp:Literal>
                         </li>
-                        <li><a href="#0">Terms and conditions</a>
+                        <li><asp:Literal runat="server" ID="StoresLink6"></asp:Literal>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-4" id="newsletter">
-                    <h3>Newsletter</h3>
+                    <asp:Literal runat="server" ID="StoresFooter2"></asp:Literal>
                     <p>
-                        Join our newsletter to keep be informed about offers and news.
+                        <asp:Literal runat="server" ID="StoresSubFooter2"></asp:Literal>
                     </p>
                     <div id="message-newsletter_2">
                     </div>
@@ -681,7 +681,7 @@
                     </form>
                 </div>
                 <div class="col-md-2 col-sm-4">
-                    <h3>Settings</h3>
+                    <asp:Literal runat="server" ID="StoresLanguage"></asp:Literal>
                     <div class="styled-select">
                         <select class="form-control" name="lang" id="lang">
                             <option value="English" selected>English</option>
@@ -696,7 +696,7 @@
             <hr>
             <div class="row">
                 <div class="col-sm-6">
-                    Β© TravelGuide 2016 - All Rights Reserved
+                    <asp:Literal runat="server" ID="StoresCopyright"></asp:Literal>
                 </div>
                 <div class="col-sm-6">
                     <div id="social_footer">
