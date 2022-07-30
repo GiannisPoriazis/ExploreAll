@@ -42,6 +42,15 @@ namespace ExploreAll
         protected global::System.Web.UI.WebControls.Literal Subtitle1;
 
         /// <summary>
+        /// Number1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number1;
+
+        /// <summary>
         /// Card1 control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace ExploreAll
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Text1;
+
+        /// <summary>
+        /// Number2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number2;
 
         /// <summary>
         /// Card2 control.
@@ -78,6 +96,15 @@ namespace ExploreAll
         protected global::System.Web.UI.WebControls.Literal Text2;
 
         /// <summary>
+        /// Number3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number3;
+
+        /// <summary>
         /// Card3 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace ExploreAll
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Text3;
+
+        /// <summary>
+        /// Number4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number4;
 
         /// <summary>
         /// Card4 control.
@@ -114,6 +150,15 @@ namespace ExploreAll
         protected global::System.Web.UI.WebControls.Literal Text4;
 
         /// <summary>
+        /// Number5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number5;
+
+        /// <summary>
         /// Card5 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +175,15 @@ namespace ExploreAll
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Text5;
+
+        /// <summary>
+        /// Number6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number6;
 
         /// <summary>
         /// Card6 control.
@@ -150,6 +204,15 @@ namespace ExploreAll
         protected global::System.Web.UI.WebControls.Literal Text6;
 
         /// <summary>
+        /// Number7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number7;
+
+        /// <summary>
         /// Card7 control.
         /// </summary>
         /// <remarks>
@@ -166,6 +229,15 @@ namespace ExploreAll
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal Text7;
+
+        /// <summary>
+        /// Number8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Number8;
 
         /// <summary>
         /// Card8 control.

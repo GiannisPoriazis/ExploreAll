@@ -225,6 +225,30 @@ namespace ExploreAll
                 case "SubFooter":
                     Subfooter.Text = data["Value"].ToString();
                     break;
+                case "Number1":
+                    Number1.Text = data["Value"].ToString();
+                    break;
+                case "Number2":
+                    Number2.Text = data["Value"].ToString();
+                    break;
+                case "Number3":
+                    Number3.Text = data["Value"].ToString();
+                    break;
+                case "Number4":
+                    Number4.Text = data["Value"].ToString();
+                    break;
+                case "Number5":
+                    Number5.Text = data["Value"].ToString();
+                    break;
+                case "Number6":
+                    Number6.Text = data["Value"].ToString();
+                    break;
+                case "Number7":
+                    Number7.Text = data["Value"].ToString();
+                    break;
+                case "Number8":
+                    Number8.Text = data["Value"].ToString();
+                    break;
                 default:
                     break;
 

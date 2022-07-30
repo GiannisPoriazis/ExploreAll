@@ -82,6 +82,8 @@ namespace ExploreAll
                     new GridColumn("Accounts", false, false, false, false, "View Accounts", CellRenderer: "checkboxRenderer"),
                     new GridColumn("EditContent", false, false, false, false, "Manage Content", CellRenderer: "checkboxRenderer"),
                     new GridColumn("ViewContent", false, false, false, false, "View Content", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("EditResources", false, false, false, false, "Manage Resources", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("ViewSetup", false, false, false, false, "View Setup", CellRenderer: "checkboxRenderer"),
                 }
             },
             {"StoresTable", new List<GridColumn>()
@@ -96,6 +98,15 @@ namespace ExploreAll
                     new GridColumn("Long", true, true, false, false),
                     new GridColumn("Thumbnail", false, false, false, false, CellRenderer: "fileUploaderComponent", CellRendererParams: null),
                     new GridColumn("AccountId", true, true, false, false, "Cust. Account")
+                }
+            },
+            { "Resources", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Name", true, true, false, false),
+                    new GridColumn("en", true, true, false, false),
+                    new GridColumn("gr", true, true, false, false),
+                   
                 }
             }
         };

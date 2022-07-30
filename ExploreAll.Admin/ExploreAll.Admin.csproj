@@ -74,6 +74,7 @@
     <Content Include="ExploreAllAdmin.aspx" />
     <Content Include="GetImageSource.aspx" />
     <Content Include="Labels.aspx" />
+    <Content Include="LanguageResources.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Permissions.aspx" />
     <Content Include="public\build\css\custom.css" />
@@ -753,6 +754,13 @@
     </Compile>
     <Compile Include="Labels.aspx.designer.cs">
       <DependentUpon>Labels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LanguageResources.aspx.cs">
+      <DependentUpon>LanguageResources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LanguageResources.aspx.designer.cs">
+      <DependentUpon>LanguageResources.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
