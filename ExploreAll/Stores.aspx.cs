@@ -174,15 +174,10 @@ namespace ExploreAll
                 case "FilterSlider":
                     FilterSlider.Text = data["Value"].ToString();
                     break;
-
-
                 default:
-                  break;
+                    break;
                
-            }
-
-
-
             }
         }
     }
+}

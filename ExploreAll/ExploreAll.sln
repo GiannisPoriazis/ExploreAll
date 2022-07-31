@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Admin", "..\Expl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Common", "..\ExploreAll.Common\ExploreAll.Common.csproj", "{0E63D808-CEA8-452F-9F36-F6718AA80EFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Bookings", "..\ExploreAll.Bookings\ExploreAll.Bookings.csproj", "{8DE6C186-C084-4BE1-B32F-A15CB5D20E2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E63D808-CEA8-452F-9F36-F6718AA80EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE6C186-C084-4BE1-B32F-A15CB5D20E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE6C186-C084-4BE1-B32F-A15CB5D20E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE6C186-C084-4BE1-B32F-A15CB5D20E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE6C186-C084-4BE1-B32F-A15CB5D20E2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

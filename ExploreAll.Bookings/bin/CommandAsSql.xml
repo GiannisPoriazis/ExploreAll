@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommandAsSql</name>
+    </assembly>
+    <members>
+        <member name="T:CommandAsSql.ExtensionMethods">
+            <summary>
+            Extension method to parse a SqlCommand as string with filled SqlParameters. Makes it easy to paste the string in a Database Management tool to debug and profile etc.
+            </summary>
+        </member>
+        <member name="M:CommandAsSql.ExtensionMethods.ToBooleanOrDefault(System.String,System.Boolean)">
+            <summary>
+            extension method overload for a string 
+            </summary>
+            <param name="s"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommandAsSql.ExtensionMethods.ToBooleanOrDefault(System.Object,System.Boolean)">
+            <summary>
+            extension method to get a bool value from an object
+            </summary>
+            <param name="o"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CommandAsSql.ExtensionMethods.ParameterValueForSQL(System.Data.SqlClient.SqlParameter)">
+            <summary>
+            Turns a parameter object to string
+            </summary>
+            <param name="param">SqlParameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:CommandAsSql.ExtensionMethods.CommandAsSql(System.Data.SqlClient.SqlCommand)">
+            <summary>
+            This method fills all parameters of the sqlcommand and displays it as a string which can be copy pasted in your DB management tool for debug purposes.
+            </summary>
+            <param name="command">The SqlCommand you want parsed as a full SQL string</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
