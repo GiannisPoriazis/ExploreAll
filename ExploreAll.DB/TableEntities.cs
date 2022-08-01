@@ -84,6 +84,9 @@ namespace ExploreAll
                     new GridColumn("ViewContent", false, false, false, false, "View Content", CellRenderer: "checkboxRenderer"),
                     new GridColumn("EditResources", false, false, false, false, "Manage Resources", CellRenderer: "checkboxRenderer"),
                     new GridColumn("ViewSetup", false, false, false, false, "View Setup", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("EditSetup", false, false, false, false, "Manage Setup", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("ViewFinances", false, false, false, false, "View Finances", CellRenderer: "checkboxRenderer"),
+                    new GridColumn("EditFinances", false, false, false, false, "Manage Finances", CellRenderer: "checkboxRenderer"),
                 }
             },
             {"StoresTable", new List<GridColumn>()
@@ -110,13 +113,39 @@ namespace ExploreAll
             },
             { "CustomersTable", new List<GridColumn>()
                 {
-                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Id", false, true, false, false),
                     new GridColumn("Title", true, true, false, false),
                     new GridColumn("Description", true, true, false, false),
                     new GridColumn("Email", true, true, false, false),
                     new GridColumn("Telephone", true, true, false, false),
                     new GridColumn("Subscription", true, true, false, false, CellEditor: "agSelectCellEditor"),
+                    new GridColumn("Host", true, true, false, false, CellEditor: "agSelectCellEditor"),
+                }
+            },
+            { "HostTable", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
                     new GridColumn("Host", true, true, false, false),
+                }
+            },
+            { "Subscriptions", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Title", true, true, false, false),
+                    new GridColumn("Rate", true, true, false, false),
+                }
+            },
+            { "CustomerUsers", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("CustomersTable_Id", true, true, false, false, "Customer Account ID"),
+                    new GridColumn("Username", true, true, false, false),
+                    new GridColumn("Password", false, false, false, false, CellRenderer: "passwordFormatterComponent"),
+                    new GridColumn("Email", true, true, false, false),
+                    new GridColumn("Telephone", true, true, false, false),
+                    new GridColumn("FirstName", true, true, false, false),
+                    new GridColumn("LastName", true, true, false, false),
+                    new GridColumn("Role", true, true, false, false, CellEditor: "agSelectCellEditor"),
                 }
             }
         };

@@ -70,9 +70,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CustomerUsers.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="ExploreAllAdmin.aspx" />
     <Content Include="GetImageSource.aspx" />
+    <Content Include="Hosts.aspx" />
     <Content Include="Labels.aspx" />
     <Content Include="LanguageResources.aspx" />
     <Content Include="Login.aspx" />
@@ -725,11 +727,19 @@
     <Content Include="Sights.aspx" />
     <Content Include="signout.aspx" />
     <Content Include="StoreManagement.aspx" />
+    <Content Include="Subscriptions.aspx" />
     <Content Include="UserAccounts.aspx" />
     <Content Include="Web.config" />
     <Content Include="CustomerAccounts.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomerUsers.aspx.cs">
+      <DependentUpon>CustomerUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerUsers.aspx.designer.cs">
+      <DependentUpon>CustomerUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -747,6 +757,13 @@
     </Compile>
     <Compile Include="GetImageSource.aspx.designer.cs">
       <DependentUpon>GetImageSource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hosts.aspx.cs">
+      <DependentUpon>Hosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hosts.aspx.designer.cs">
+      <DependentUpon>Hosts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Labels.aspx.cs">
       <DependentUpon>Labels.aspx</DependentUpon>
@@ -797,6 +814,13 @@
     </Compile>
     <Compile Include="StoreManagement.aspx.designer.cs">
       <DependentUpon>StoreManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Subscriptions.aspx.cs">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Subscriptions.aspx.designer.cs">
+      <DependentUpon>Subscriptions.aspx</DependentUpon>
     </Compile>
     <Compile Include="system\template\base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>
