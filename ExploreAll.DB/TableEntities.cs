@@ -105,8 +105,18 @@ namespace ExploreAll
                     new GridColumn("Id", false, false, true, true),
                     new GridColumn("Name", true, true, false, false),
                     new GridColumn("en", true, true, false, false),
-                    new GridColumn("gr", true, true, false, false),
-                   
+                    new GridColumn("gr", true, true, false, false)                   
+                }
+            },
+            { "CustomersTable", new List<GridColumn>()
+                {
+                    new GridColumn("Id", false, false, true, true),
+                    new GridColumn("Title", true, true, false, false),
+                    new GridColumn("Description", true, true, false, false),
+                    new GridColumn("Email", true, true, false, false),
+                    new GridColumn("Telephone", true, true, false, false),
+                    new GridColumn("Subscription", true, true, false, false, CellEditor: "agSelectCellEditor"),
+                    new GridColumn("Host", true, true, false, false),
                 }
             }
         };
