@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ExploreAll_Admin
+namespace ExploreAll_Bookings
 {
     public partial class signout : System.Web.UI.Page
     {

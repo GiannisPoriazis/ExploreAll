@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExploreAll_Admin.system.template
+namespace ExploreAll_Bookings.system.template
 {
 
 
