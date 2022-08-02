@@ -13,7 +13,7 @@ using ExploreAll.Common;
 
 namespace ExploreAll.UI
 {
-    [ToolboxData("<{0}:Grid runat=server></{0}:Grid>")]
+    [ToolboxData("<{0}:MenuItem runat=server></{0}:MenuItem>")]
     public class MenuItem : TemplateControl
     {
         [Bindable(true)]

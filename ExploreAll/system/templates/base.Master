@@ -54,7 +54,7 @@
                             </li>
                             <li class="submenu">
                                 <a href="javascript:void(0);" class="show-submenu">Διαμονή<i class="icon-down-open-mini"></i></a>
-                                <ul>
+<%--                                <ul>
                                     <li><a href="florence-must-see-grid.html">Must see</a>
                                     </li>
                                     <li><a href="florence-events-grid.html">Events</a>
@@ -71,7 +71,7 @@
                                     </li>
                                     <li><a href="faq.html">Info&amp;Faqs</a>
                                     </li>
-                                </ul>
+                                </ul>--%>
                             </li>
                             <li class="megamenu submenu">
                                 <a href="javascript:void(0);" class="show-submenu-mega">Αξιοθέατα<i class="icon-down-open-mini"></i></a>
@@ -131,7 +131,7 @@
                                 <!-- End menu-wrapper -->
                             </li>
                             <li class="submenu">
-                                <a href="javascript:void(0);" class="show-submenu">Καταστήματα<i class="icon-down-open-mini"></i></a>
+                                <a href="Stores.aspx" class="show-submenu">Καταστήματα<i class="icon-down-open-mini"></i></a>
                                 <ul>
                                     <li><a href="florence-must-see-grid.html">Must see</a>
                                     </li>
