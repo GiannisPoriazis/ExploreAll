@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExploreAll_Admin
+namespace ExploreAll_Bookings
 {
 
 

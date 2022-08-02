@@ -102,7 +102,11 @@ exploreall.removeGridRecord = function (gridObj) {
 exploreall.getRowData = function (grid) {
     const rowData = [];
     grid.api.forEachNode(function (node) {
+        for (let i = 0; i < Object.keys(node.data).length; i++) {
+            node.data[Object.keys(node.data)[i]] = Object.values(node.data)[i].replace('"', '\"');
+        }
         rowData.push(node.data);
+        debugger;
     });
 
     return rowData;

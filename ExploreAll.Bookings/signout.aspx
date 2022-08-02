@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signout.aspx.cs" Inherits="ExploreAll_Admin.signout" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signout.aspx.cs" Inherits="ExploreAll_Bookings.signout" %>
 
 <!DOCTYPE html>
 

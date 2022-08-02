@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ExploreAll;
 
-namespace ExploreAll_Admin
+namespace ExploreAll_Bookings
 {
     public partial class Login : System.Web.UI.Page
     {

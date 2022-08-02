@@ -13,7 +13,7 @@ using ExploreAll.Common;
 
 namespace ExploreAll.UI
 {
-    [ToolboxData("<{0}:Grid runat=server></{0}:Grid>")]
+    [ToolboxData("<{0}:MenuItem runat=server></{0}:MenuItem>")]
     public class MenuItem : TemplateControl
     {
         [Bindable(true)]
@@ -28,7 +28,7 @@ namespace ExploreAll.UI
 
         protected override void CreateChildControls()
         {
-            if (Permission != (int)CommonHelper.eBoolValues.Ignore)
+            if (Permission != (int)CommonHelper.eBoolValues.Ignore && HttpContext.Current.Session["Role"] != null)
             {
                 DataTable UserRoles = DBSupport.GetData("UserPermissions");
                 DataRow User = null;
