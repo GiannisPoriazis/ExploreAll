@@ -20,7 +20,7 @@ namespace ExploreAll_Bookings
         {
             bool res = false;
             System.Web.SessionState.HttpSessionState ses = HttpContext.Current.Session;
-            DataTable dt = DBSupport.GetData("UserTable");
+            DataTable dt = DBSupport.GetData("CustomerUsers");
 
             foreach (DataRow dr in dt.Rows)
             {

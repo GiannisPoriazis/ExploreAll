@@ -15,7 +15,10 @@ namespace ExploreAll.Common
             { 2, "EditContent" },
             { 3, "ViewContent" },
             { 4, "EditResources" },
-            { 5, "ViewSetup" }
+            { 5, "ViewSetup" },
+            { 6, "EditSetup" },
+            { 7, "ViewFinances" },
+            { 8, "EditFinances" }
         };
 
         public enum eBoolValues

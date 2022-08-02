@@ -8,6 +8,10 @@ exploreall.selectEditorParams = [
     {
         key: 'Subscription',
         values: null
+    },
+    {
+        key: 'Host',
+        values: null
     }
 ];
 
@@ -35,7 +39,9 @@ exploreall.setupGrid = function (source, controls, gridObj) {
                 checkboxRenderer: CheckboxRenderer
             };
 
-            exploreall.selectEditorParams.find(x => x.key == "Role").values = gridObject.gridOptions.cellEditorParamValues;
+            exploreall.selectEditorParams.find(x => x.key == "Role").values = gridObject.gridOptions.cellEditorRoleValues;
+            exploreall.selectEditorParams.find(x => x.key == "Subscription").values = gridObject.gridOptions.cellEditorSubscriptionValues;
+            exploreall.selectEditorParams.find(x => x.key == "Host").values = gridObject.gridOptions.cellEditorHostValues;
                         
             for (var i = 0; i < gridObject.gridOptions.columnDefs.length; i++) {
                 var cellEditorParams = exploreall.selectEditorParams.find(x => x.key == gridObject.gridOptions.columnDefs[i].field);

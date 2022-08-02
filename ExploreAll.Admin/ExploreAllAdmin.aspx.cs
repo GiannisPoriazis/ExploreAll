@@ -193,14 +193,54 @@ namespace ExploreAll_Admin
             DataTable dtRoles = DBSupport.GetData("UserPermissions");
             string UserRoles = "[";
 
-            foreach(DataRow role in dtRoles.Rows)
+            if (dtRoles.Rows.Count > 0)
             {
-                UserRoles += $"\"{role["Role"]}\",";
+                foreach (DataRow role in dtRoles.Rows)
+                {
+                    UserRoles += $"\"{role["Role"]}\",";
+                }
+
+                UserRoles = UserRoles.Remove(UserRoles.LastIndexOf(",")) + "]";
             }
+            else
+                UserRoles += "]";
 
-            UserRoles = UserRoles.Remove(UserRoles.LastIndexOf(",")) + "]";
+            DataTable dtCustomerSubs = DBSupport.GetData("Subscriptions");
+            string CustomerSubscriptions = "[";
 
-            return "{ \"columnDefs\": " + columnDefs + ", \"rowData\": " + JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true, \"cellEditorParamValues\": " + UserRoles + "}";
+            if (dtCustomerSubs.Rows.Count > 0)
+            {
+                foreach (DataRow subscription in dtCustomerSubs.Rows)
+                {
+                    CustomerSubscriptions += $"\"{subscription["Title"]}\",";
+                }
+
+                CustomerSubscriptions = CustomerSubscriptions.Remove(CustomerSubscriptions.LastIndexOf(",")) + "]";
+            }
+            else
+                CustomerSubscriptions += "]";
+
+            DataTable dtHosts = DBSupport.GetData("HostTable");
+            string Hosts = "[";
+
+            if (dtHosts.Rows.Count > 0)
+            {
+                foreach (DataRow host in dtHosts.Rows)
+                {
+                    Hosts += $"\"{host["Host"]}\",";
+                }
+
+                Hosts = Hosts.Remove(Hosts.LastIndexOf(",")) + "]";
+            }
+            else
+                Hosts += "]";
+
+            return "{ \"columnDefs\": " + 
+                columnDefs + ", \"rowData\": " + 
+                JsonConvert.SerializeObject(rowData) + ", \"rowSelection\": \"single\",  \"pagination\": true, \"cellEditorRoleValues\": " +
+                UserRoles + ", \"cellEditorSubscriptionValues\": " +
+                CustomerSubscriptions + ", \"cellEditorHostValues\": " +
+                Hosts + "}";
         }
 
         [WebMethod]
