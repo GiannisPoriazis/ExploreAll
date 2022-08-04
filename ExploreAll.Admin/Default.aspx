@@ -5,50 +5,17 @@
                     <div class="ecommerce-widget">
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <exploreall:SingleChart runat="server" ID="test" MetricValue="$12099" Percentage="5.86" Title="Total Revenue" LineColor="#660066" FillColor="#660066"></exploreall:SingleChart>
+                                <exploreall:SingleChart runat="server" ID="LinearChart1" MetricValue="$12099" Percentage="5.86" Title="Total Revenue1" LineColor="#000099" FillColor="#8080ff"></exploreall:SingleChart>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <exploreall:SingleChart runat="server" ID="SingleChart1" MetricValue="$12099" Percentage="5.86" Title="Total Revenue" LineColor="#5969ff" FillColor="#dbdeff"></exploreall:SingleChart>
-<%--                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Affiliate Revenue</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$12099</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
-                                            <span><i class="fa fa-fw fa-arrow-up"></i></span><span>5.86%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue2"></div>
-                                </div>--%>
+                                <exploreall:SingleChart runat="server" ID="LinearChart2" MetricValue="$12099" Percentage="5.86" Title="Total Revenue2" LineColor="#006633" FillColor="#66ffb3"></exploreall:SingleChart>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Refunds</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">0.00</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-primary font-weight-bold">
-                                            <span>N/A</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue3"></div>
-                                </div>
+                                <exploreall:SingleChart runat="server" ID="LinearChart3" MetricValue="$12099" Percentage="5.86" Title="Total Revenue3" LineColor="#b30000" FillColor="#ff8080"></exploreall:SingleChart>
                             </div>
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted">Avg. Revenue Per User</h5>
-                                        <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">$28000</h1>
-                                        </div>
-                                        <div class="metric-label d-inline-block float-right text-secondary font-weight-bold">
-                                            <span>-2.00%</span>
-                                        </div>
-                                    </div>
-                                    <div id="sparkline-revenue4"></div>
-                                </div>
+                                <exploreall:SingleChart runat="server" ID="SingleChart3" MetricValue="$12099" Percentage="5.86" Title="Total Revenue4" LineColor="#e69900" FillColor="#ffdd99"></exploreall:SingleChart>
+
                             </div>
                         </div>
                         <div class="row">
@@ -148,24 +115,7 @@
                             <!-- customer acquistion  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
-                                    <h5 class="card-header">Customer Acquisition</h5>
-                                    <div class="card-body">
-                                        <div class="ct-chart ct-golden-section" style="height: 354px;"></div>
-                                        <div class="text-center">
-                                            <span class="legend-item mr-2">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">Returning</span>
-                                            </span>
-                                            <span class="legend-item mr-2">
-
-                                                    <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
-                                            <span class="legend-text">First Time</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                               <exploreall:DoubleChart ID="DoubleGraph" runat="server" Title="DoubleGraph" Graph1="Graph1" Graph2="Graph2"></exploreall:DoubleChart>
                             <!-- ============================================================== -->
                             <!-- end customer acquistion  -->
                             <!-- ============================================================== -->
