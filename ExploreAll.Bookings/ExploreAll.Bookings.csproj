@@ -1146,6 +1146,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ExploreAll.Common\ExploreAll.Common.csproj">
+      <Project>{0e63d808-cea8-452f-9f36-f6718aa80eff}</Project>
+      <Name>ExploreAll.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ExploreAll.DB\ExploreAll.DB.csproj">
       <Project>{790e8330-5803-4ad5-9a31-0926833b836b}</Project>
       <Name>ExploreAll.DB</Name>

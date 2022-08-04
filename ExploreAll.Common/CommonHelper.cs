@@ -27,5 +27,13 @@ namespace ExploreAll.Common
             False = 0,
             True = 1
         }
+
+        public enum eSubscriptions
+        {
+            Premium = 1,
+            Bookings = 2,
+            Rentals = 3,
+            Basic = 4
+        }
     }
 }

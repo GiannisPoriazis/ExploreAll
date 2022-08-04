@@ -66,8 +66,10 @@ exploreall.setupGrid = function (source, controls, gridObj) {
             new agGrid.Grid(gridDiv, gridObject.gridOptions);
             gridObject.gridOptions.api.sizeColumnsToFit();
 
-            if (ctls)
+            if (ctls) {
                 gridDiv.querySelector(".ag-paging-panel").appendChild(gridControls);
+                gridControls.style.display = "block";
+            }
         }
     }
   
