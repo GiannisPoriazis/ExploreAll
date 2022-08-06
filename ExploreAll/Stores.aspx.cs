@@ -15,6 +15,19 @@ namespace ExploreAll
             DataTable dt = DBSupport.GetData("LabelsTable");
             foreach (DataRow dr in dt.Rows)
                 SetValues(dr);
+
+            StoresWrapper.Text = String.Empty;
+            DataTable stores = DBSupport.GetData("StoresTable");
+
+            for (int i = 0; i < stores.Rows.Count; i += 2)
+            {
+                DataRow storeRow = stores.Rows[i];
+
+                StoresWrapper.Text += String.Format(
+                    ExploreAllHelper.Row,
+                    String.Format(ExploreAllHelper.StoreHtml, storeRow["Title"], storeRow["Label"], "7.5", "Superb", storeRow["Description"], storeRow["Title"], "data:image/png;base64," + ExploreAllHelper.GetImageSource(storeRow["Thumbnail"].ToString()))
+                );
+            }
         }
 
         protected void SetValues(DataRow data)
@@ -35,43 +48,7 @@ namespace ExploreAll
                     break;
                 case "HeadLink3":
                     HeadLink3.Text = data["Value"].ToString();
-                    break;
-                case "ContentOne":
-                    ContentOne.Text = data["Value"].ToString();
-                    break;
-                case "SubContent1":
-                    SubContent1.Text = data["Value"].ToString();
-                    break;
-                case "ContentTwo":
-                    ContentTwo.Text = data["Value"].ToString();
-                    break;
-                case "SubContent2":
-                    SubContent2.Text = data["Value"].ToString();
-                    break;
-                case "ContentThree":
-                    ContentThree.Text = data["Value"].ToString();
-                    break;
-                case "SubContent3":
-                    SubContent3.Text = data["Value"].ToString();
-                    break;
-                case "ContentFour":
-                    ContentFour.Text = data["Value"].ToString();
-                    break;
-                case "SubContent4":
-                    SubContent4.Text = data["Value"].ToString();
-                    break;
-                case "ContentFive":
-                    ContentFive.Text = data["Value"].ToString();
-                    break;
-                case "SubContent5":
-                    SubContent5.Text = data["Value"].ToString();
-                    break;
-                case "ContentSix":
-                    ContentSix.Text = data["Value"].ToString();
-                    break;
-                case "SubContent6":
-                    SubContent6.Text = data["Value"].ToString();
-                    break;
+                    break;                
                 case "Categories":
                     Categories.Text = data["Value"].ToString();
                     break;

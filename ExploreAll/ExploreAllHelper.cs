@@ -16,6 +16,48 @@ namespace ExploreAll
 
     public class ExploreAllHelper
     {
+        public static string StoreHtml = @"<div class='col-sm-6'>
+                            <div class='img_wrapper'>
+                                <div class='ribbon'>
+                                    <span>Popular</span>
+                                </div>
+                                <div class='tools_i'>
+                                    <form action='http://maps.google.com/maps' method='get' target='_blank' class='directions_list'>
+                                        <input type='hidden' name='daddr' value='43.773460, 11.255985'>
+                                        <button type='submit' class='tooltip_styled tooltip-effect-4'>
+                                            <span class='tooltip-item'></span>
+                                            <span class='tooltip-content'>Directions</span>
+                                        </button>
+                                    </form>
+                                    <div class='wishlist_close'></div>
+                                </div>
+                                <!-- End tools i-->
+                                <div class='img_container'>
+                                    <a href='florence-must-see-detail.html'>
+                                        <img style='background-image: url({6}); background-size: cover; background-position: center;' width='800' height='533' width='800' height='533' class='img-responsive' alt=''>
+                                        <div class='short_info'>
+                                            <h3>{0}</h3>
+                                            <em>{1}</em>
+                                            <div class='score_wp'>{3}
+                                                <div id='score_1' class='score' data-value='{2}'></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--End img_wrapper-->
+                        </div>
+                        <div class='col-sm-6'>
+                            <div class='desc'>
+                                {5}
+                                <p>
+                                    {4}
+                                </p>
+                                <p><a href='florence-must-see-detail.html' class='button small'>Read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>";
         public static string SightHtml = @"<div class='col-lg-6 col-md-12 col-sm-6 interest-point' data-title='{4}' data-category='{5}' data-desc='{6}' data-lat='{7}' data-long='{8}'>
                             <div class='img_wrapper'>
                                 <div class='ribbon'>
@@ -36,7 +78,7 @@ namespace ExploreAll
                                 <!-- End tool_i -->
                                 <div class='img_container'>
                                     <a href = 'florence-bar-detail.html'>
-                                        <img style='background-image: url({2}); background-size: cover;' width='800' height='533' class='img-responsive' alt=''>
+                                        <img style='background-image: url({2}); background-size: cover; background-position: center;' width='800' height='533' class='img-responsive' alt=''>
                                         <div class='short_info'>
                                             <h3>{0}</h3>
                                             <em>{1}</em>

@@ -108,7 +108,6 @@ exploreall.getRowData = function (grid) {
             node.data[Object.keys(node.data)[i]] = Object.values(node.data)[i].replace('"', '\"');
         }
         rowData.push(node.data);
-        debugger;
     });
 
     return rowData;
