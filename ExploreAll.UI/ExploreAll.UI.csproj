@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColumnChart.cs" />
+    <Compile Include="InteractivePieChart.cs" />
+    <Compile Include="PieChart.cs" />
     <Compile Include="DoubleChart.cs" />
     <Compile Include="Grid.cs" />
     <Compile Include="MenuItem.cs" />

@@ -18,6 +18,7 @@
 
                             </div>
                         </div>
+                       </div>
                         <div class="row">
                             <!-- ============================================================== -->
                       
@@ -106,32 +107,35 @@
                                     </div>
                                 </div>
                             </div>
+                          
                             <!-- ============================================================== -->
                             <!-- end recent orders  -->
 
-    
                             <!-- ============================================================== -->
                             <!-- ============================================================== -->
                             <!-- customer acquistion  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                                <exploreall:DoubleChart ID="DoubleGraph" runat="server" Title="DoubleGraph" Graph1="Graph1" Graph2="Graph2"></exploreall:DoubleChart>
+                           </div> 
+                         </div> 
                             <!-- ============================================================== -->
                             <!-- end customer acquistion  -->
                             <!-- ============================================================== -->
-                        </div>
+                         
                         <div class="row">
                             <!-- ============================================================== -->
               				                        <!-- product category  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
-                                <div class="card">
+                            <exploreall:PieChart ID="PieChart1" runat="server" Title="PieChart1" Sec1="Sec1" Sec2="Sec2" Sec3="Sec3"></exploreall:PieChart>
+                                <%--<div class="card">
                                     <h5 class="card-header"> Product Category</h5>
                                     <div class="card-body">
                                         <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
                                         <div class="text-center m-t-40">
                                             <span class="legend-item mr-3">
-                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
+                                              <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">Man</span>
                                             </span>
                                             <span class="legend-item mr-3">
                                                 <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
@@ -143,29 +147,30 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
                             <!-- ============================================================== -->
                             <!-- end product category  -->
                                    <!-- product sales  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="card">
+                               <exploreall:ColumnChart runat="server" ID="ColumnChart1" title="ColumnChart"></exploreall:ColumnChart>
+                                <%--<div class="card">
                                     <div class="card-header">
-                                        <!-- <div class="float-right">
+                                        <div class="float-right">
                                                 <select class="custom-select">
                                                     <option selected>Today</option>
                                                     <option value="1">Weekly</option>
                                                     <option value="2">Monthly</option>
                                                     <option value="3">Yearly</option>
                                                 </select>
-                                            </div> -->
-                                        <h5 class="mb-0"> Product Sales</h5>
+                                            </div> 
+                                        <h5 class="mb-0"> product sales</h5>
                                     </div>
                                     <div class="card-body">
                                         <div class="ct-chart-product ct-golden-section"></div>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
                             <!-- ============================================================== -->
                             <!-- end product sales  -->
@@ -322,12 +327,13 @@
                             <!-- category revenue  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-                                <div class="card">
+                               <exploreall:InteractivePieChart ID="IntPchart" runat="server" Title="Interactive Pie Chart"></exploreall:InteractivePieChart>
+                                <%-- <div class="card">
                                     <h5 class="card-header">Revenue by Category</h5>
                                     <div class="card-body">
                                         <div id="c3chart_category" style="height: 420px;"></div>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
                             <!-- ============================================================== -->
                             <!-- end category revenue  -->
