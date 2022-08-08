@@ -20,11 +20,12 @@ namespace ExploreAll_Bookings
         {
             bool res = false;
             System.Web.SessionState.HttpSessionState ses = HttpContext.Current.Session;
-            DataTable dt = DBSupport.GetData("CustomerUsers");
+            DataTable dt = DBSupport.GetData("CustomerUserView");
 
             foreach (DataRow dr in dt.Rows)
             {
-                if (dr["Username"].ToString() == username && dr["Password"].ToString() == password)
+                if (dr["Username"].ToString() == username && dr["Password"].ToString() == password && 
+                    (int)dr["Subscription_Id"] == (int)ExploreAll.Common.CommonHelper.eSubscriptions.Bookings)
                 {
                     ses["Role"] = dr["Role"];
                     ses["User"] = dr["Username"];

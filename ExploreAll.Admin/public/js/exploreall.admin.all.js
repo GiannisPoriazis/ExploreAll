@@ -66,8 +66,10 @@ exploreall.setupGrid = function (source, controls, gridObj) {
             new agGrid.Grid(gridDiv, gridObject.gridOptions);
             gridObject.gridOptions.api.sizeColumnsToFit();
 
-            if (ctls)
+            if (ctls) {
                 gridDiv.querySelector(".ag-paging-panel").appendChild(gridControls);
+                gridControls.style.display = "block";
+            }
         }
     }
   
@@ -106,7 +108,6 @@ exploreall.getRowData = function (grid) {
             node.data[Object.keys(node.data)[i]] = Object.values(node.data)[i].replace('"', '\"');
         }
         rowData.push(node.data);
-        debugger;
     });
 
     return rowData;

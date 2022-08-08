@@ -93,6 +93,8 @@ namespace ExploreAll
                 {
                     new GridColumn("Id", false, false, true, true),
                     new GridColumn("Title", true, true, false, false),
+                    new GridColumn("Label", true, true, false, false),
+                    new GridColumn("Description", true, true, false, false),
                     new GridColumn("Street", true, true, false, false),
                     new GridColumn("City", true, true, false, false),
                     new GridColumn("Zip", true, true, false, false),

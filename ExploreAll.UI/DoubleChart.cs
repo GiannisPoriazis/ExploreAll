@@ -46,7 +46,7 @@ namespace ExploreAll.UI
             legendItem2.Attributes.Add("class", "legend-item mr-2");
             legendItem2.Controls.Add(new HtmlGenericControl("span")
             {
-                InnerHtml = "<i class='fa fa-fw fa - square - full'></i>"
+                InnerHtml = "<i class='fa fa-fw fa-square-full'></i>"
             });
             legendItem2.Controls.Add(legendText2);
 
@@ -59,7 +59,7 @@ namespace ExploreAll.UI
             legendItem.Attributes.Add("class", "legend-item mr-2");
             legendItem.Controls.Add(new HtmlGenericControl("span")
             {
-                InnerHtml = "<i class='fa fa-fw fa - square - full'></i>"
+                InnerHtml = "<i class='fa fa-fw fa-square-full'></i>"
             });
             legendItem.Controls.Add(legendText);
             
