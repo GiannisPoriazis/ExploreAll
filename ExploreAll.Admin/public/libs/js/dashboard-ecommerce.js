@@ -231,7 +231,7 @@
     //        columns: [
     //            ['Men', 100],
     //            ['Women', 80],
-    //            ['Accessories', 50],
+    //            ['Random', 50],
     //            ['Children', 40],
     //            ['Apperal', 20],
 

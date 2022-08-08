@@ -26,6 +26,7 @@
 
                                           <!-- recent orders  -->
                             <!-- ============================================================== -->
+                           
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Recent Orders</h5>
@@ -242,6 +243,7 @@
                             <!-- ============================================================== -->
                             <!-- sales  -->
                             <!-- ============================================================== -->
+                           
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
@@ -340,7 +342,8 @@
                             <!-- ============================================================== -->
 
                             <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                                <div class="card">
+                              <exploreall:LinearChart ID="LineChart1" runat="server" Title="LinearChart" Revenue="25000" Percentage="33"></exploreall:LinearChart>    
+                               <%--    <div class="card">
                                     <h5 class="card-header"> Total Revenue</h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
@@ -348,7 +351,7 @@
                                     <div class="card-footer">
                                         <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
                                     </div>
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                         <div class="row">

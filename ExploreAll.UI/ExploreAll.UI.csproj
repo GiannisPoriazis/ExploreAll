@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="ColumnChart.cs" />
     <Compile Include="InteractivePieChart.cs" />
+    <Compile Include="LinearChart.cs" />
     <Compile Include="PieChart.cs" />
     <Compile Include="DoubleChart.cs" />
     <Compile Include="Grid.cs" />
