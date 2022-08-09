@@ -169,7 +169,7 @@
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Content</a>
                                         <div id="submenu-5" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
-                                                <exploreall:MenuItem runat="server" Title="Calendar" Target="Calendar.aspx" Permission="3"></exploreall:MenuItem>
+                                                <exploreall:MenuItem runat="server" Title="Labels" Target="Labels.aspx" Permission="3"></exploreall:MenuItem>
                                                 <exploreall:MenuItem runat="server" Title="Sights" Target="Sights.aspx" Permission="3"></exploreall:MenuItem>
                                                 <exploreall:MenuItem runat="server" Title="Stores" Target="StoreManagement.aspx" Permission="3"></exploreall:MenuItem>
                                             </ul>
@@ -196,6 +196,41 @@
                                         <div id="submenu-7" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
                                                 <exploreall:MenuItem runat="server" Title="Translation Management" Target="LanguageResources.aspx" Permission="5 "></exploreall:MenuItem>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-divider">
+                                       Accomodation 
+                                    </li> 
+                                     <li class="nav-item">
+                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-table"></i>Accomodation</a>
+                                        <div id="submenu-8" class="collapse submenu" style="">
+                                            <ul class="nav flex-column">
+                                                <exploreall:MenuItem runat="server" Title="Rooms" Target="Rooms.aspx" Permission="3"></exploreall:MenuItem>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-divider">
+                                       Bookings
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-table"></i>Bookings</a>
+                                        <div id="submenu-9" class="collapse submenu" style="">
+                                            <ul class="nav flex-column">
+                                                <exploreall:MenuItem runat="server" Title="Calendar" Target="Calendar.aspx" Permission="3"></exploreall:MenuItem>
+                                                <exploreall:MenuItem runat="server" Title="Bookings List" Target="List.aspx" Permission="3"></exploreall:MenuItem>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-divider">
+                                       Finances
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-fw fa-table"></i>Finances</a>
+                                        <div id="submenu-10" class="collapse submenu" style="">
+                                            <ul class="nav flex-column">
+                                                <exploreall:MenuItem runat="server" Title="Finances" Target="Finances.aspx" Permission="7"></exploreall:MenuItem>
+                                                <exploreall:MenuItem runat="server" Title="Income Charts" Target="Income.aspx" Permission="7"></exploreall:MenuItem>
                                             </ul>
                                         </div>
                                     </li>
