@@ -33,6 +33,7 @@ exploreall.setupGrid = function (source, controls, gridObj) {
                 var gridControls = gridDiv.parentElement.querySelector(".gridControls");
                 
             gridDiv.innerHTML = "";
+            gridObject.gridOptions.paginationPageSize = 30;
             gridObject.gridOptions.components = {
                 fileUploaderComponent: FileUploaderComponent,
                 passwordFormatterComponent: PasswordFormatterComponent,

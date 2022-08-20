@@ -1,0 +1,15 @@
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\ExploreAll.Travel.exe.config
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\ExploreAll.Travel.exe
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\ExploreAll.Travel.pdb
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.csproj.AssemblyReference.cache
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.csproj.SuggestedBindingRedirects.cache
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.csproj.CoreCompileInputs.cache
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.csproj.CopyComplete
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.exe
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.pdb
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\ExploreAll.Travel.exe.manifest
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\bin\Debug\ExploreAll.Travel.application
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.exe.manifest
+C:\Users\Giannis\source\repos\ExploreAll.Net\ExploreAll.Travel\obj\Debug\ExploreAll.Travel.application
