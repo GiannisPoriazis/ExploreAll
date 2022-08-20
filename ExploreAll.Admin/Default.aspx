@@ -347,7 +347,7 @@
                                     <h5 class="card-header"> Total Revenue</h5>
                                     <div class="card-body">
                                         <div id="morris_totalrevenue"></div>
-                                    </div>
+                                     </div>
                                     <div class="card-footer">
                                         <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
                                     </div>

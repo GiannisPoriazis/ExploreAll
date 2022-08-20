@@ -32,7 +32,7 @@ namespace ExploreAll.UI
 
             c3Chart = new HtmlGenericControl("div");
             c3Chart.Attributes.Add("id", "c3chart_category");
-            c3Chart.Attributes.Add("style", "height: 420px;");
+            c3Chart.Attributes.Add("style", "height: 400px;");
             
 
             cardBody = new HtmlGenericControl("div");
