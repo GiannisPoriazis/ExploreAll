@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ExploreAll.Travel.exe" version="1.0.0.8" publicKeyToken="e4e3d85e32568699" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ExploreAll.Travel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ExploreAll.Travel.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExploreAll.Travel.exe" size="12272">
+      <assemblyIdentity name="ExploreAll.Travel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EueNrm5DZ/yHse5rmyH2fzqyCdL0rFW53UfqaxsMKbo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="701992">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tiSUnfiw46YVP9+3MKfG9JkLZZLuDZIuF4hDPSdmEPM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ExploreAll.Travel.exe.config" size="367">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NFcKTQ9RNToaCUIi0fVrU9q3VC7f2sr2OXBYE0zBY+E=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-1R2GIUG\Giannis" issuerKeyHash="d9e71b348b51a085b60496384544f2e0a6e73e11" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>SYz9yGQDXfem+3b56iPs9oOlZIsydVMYkSIJapCQ1XE=</DigestValue></Reference></SignedInfo><SignatureValue>IuQ8rZtwkHCcA/RFjho4RyzI17s5ZqM7NWEFZffBMeBpMc1Xg4C1/cDuF28iuXhGKS4dTgVWECxBkv81Q18dXeb5jW1ubicc+IxA7HGx0a2sor9whLMrKduAsw30Bi8hRIW7gFVqPSGBxsbha3uaXpRLZZne7P3XEiVT38xFxdw=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pZoynAhzr5zode0tEcGm+70gk83Xo8pVbosxv0gmP+BrAT8iUvuiE4fX0SlB15HzZDWHTmK5VJ6hxArMnT3tKgc688B+axUYFDtBeYtW4mv1CPpnEVpoBGEjSNgqHas0pRx6mOGoKIgnumIyulnhTr22B/oAMQ6yak8cOucDWFk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="71d590906a092291185375328b64a583f6ec23eaf976fba6f75d0364c8fd8c49" Description="" Url=""><as:assemblyIdentity name="ExploreAll.Travel.exe" version="1.0.0.8" publicKeyToken="e4e3d85e32568699" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-1R2GIUG\Giannis</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>yUtSTNFCXHw7jm1t7hvk777z8Or9+58J3qO6Mo19s+g=</DigestValue></Reference></SignedInfo><SignatureValue>WZtHqtgZB4VI4fMFYzD0ovotooiCJ/okaBeJEmzTn+G2yRJ4nydpmgyhYX+SAFBs4kkWMzpVm1cZ1mxM/QNpWYiKA/YQ+0cOkyA0T614vEdV86BaWwyXvK5UHnyhFxHYZ50cTSfc+tU+ZMvRuY3X93KrrOnS8S7oQ7NL/seaxU8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pZoynAhzr5zode0tEcGm+70gk83Xo8pVbosxv0gmP+BrAT8iUvuiE4fX0SlB15HzZDWHTmK5VJ6hxArMnT3tKgc688B+axUYFDtBeYtW4mv1CPpnEVpoBGEjSNgqHas0pRx6mOGoKIgnumIyulnhTr22B/oAMQ6yak8cOucDWFk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB9TCCAV6gAwIBAgIQQ4P1RkelirxHxSeIKanRrTANBgkqhkiG9w0BAQsFADA5MTcwNQYDVQQDHi4ARABFAFMASwBUAE8AUAAtADEAUgAyAEcASQBVAEcAXABHAGkAYQBuAG4AaQBzMB4XDTIyMDgyMDE0MTAxM1oXDTIzMDgyMDIwMTAxM1owOTE3MDUGA1UEAx4uAEQARQBTAEsAVABPAFAALQAxAFIAMgBHAEkAVQBHAFwARwBpAGEAbgBuAGkAczCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEApZoynAhzr5zode0tEcGm+70gk83Xo8pVbosxv0gmP+BrAT8iUvuiE4fX0SlB15HzZDWHTmK5VJ6hxArMnT3tKgc688B+axUYFDtBeYtW4mv1CPpnEVpoBGEjSNgqHas0pRx6mOGoKIgnumIyulnhTr22B/oAMQ6yak8cOucDWFkCAwEAATANBgkqhkiG9w0BAQsFAAOBgQBPwltjoWWriwXgpeJGOm4qWTI93JHs3G+U+N4glKZwr4YI0sRMt2lTHptbL8DiMiaxSUWS3LuxJdk3/Gd4Y6t8T9JmbPixoMh67FiHZyL2ESyHiW6N+B9UmzmdAzJNDzYmO5ktwFdl2SAWzqNUhI/IRxCg8FkOEB7jC/EznVpOtQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
