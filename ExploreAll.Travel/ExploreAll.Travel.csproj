@@ -99,5 +99,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExploreAll.DB\ExploreAll.DB.csproj">
+      <Project>{790e8330-5803-4ad5-9a31-0926833b836b}</Project>
+      <Name>ExploreAll.DB</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

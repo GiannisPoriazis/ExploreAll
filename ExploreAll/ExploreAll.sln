@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Bookings", "..\E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreAll.Travel", "..\ExploreAll.Travel\ExploreAll.Travel.csproj", "{9F6B2D4E-B1A7-4F2C-950F-2BA11D90EA44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploreEmail", "..\ExploreEmail\ExploreEmail.csproj", "{304A2931-E3D7-4783-9CBE-899A996DD7AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9F6B2D4E-B1A7-4F2C-950F-2BA11D90EA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6B2D4E-B1A7-4F2C-950F-2BA11D90EA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6B2D4E-B1A7-4F2C-950F-2BA11D90EA44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304A2931-E3D7-4783-9CBE-899A996DD7AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304A2931-E3D7-4783-9CBE-899A996DD7AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304A2931-E3D7-4783-9CBE-899A996DD7AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304A2931-E3D7-4783-9CBE-899A996DD7AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

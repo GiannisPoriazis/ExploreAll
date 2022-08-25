@@ -1,0 +1,15 @@
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.csproj.AssemblyReference.cache
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.AssemblyInfoInputs.cache
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.AssemblyInfo.cs
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.csproj.CoreCompileInputs.cache
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\bin\Debug\net6.0\ExploreEmail.exe
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\bin\Debug\net6.0\ExploreEmail.deps.json
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\bin\Debug\net6.0\ExploreEmail.runtimeconfig.json
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\bin\Debug\net6.0\ExploreEmail.dll
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\bin\Debug\net6.0\ExploreEmail.pdb
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.dll
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\refint\ExploreEmail.dll
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.pdb
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ExploreEmail.genruntimeconfig.cache
+C:\Users\Kostas\source\repos\GiannisPoriazis\ExploreAll\ExploreEmail\obj\Debug\net6.0\ref\ExploreEmail.dll

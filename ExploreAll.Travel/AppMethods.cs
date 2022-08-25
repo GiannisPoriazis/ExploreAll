@@ -2,15 +2,20 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+
 
 namespace ExploreAll.Travel
 {
     class AppMethods
     {
+        public static object DBSupport { get; private set; }
+
         public static string DoLogin(string data)
         {
             var cred = JsonConvert.DeserializeObject<AppHelper.LoginCredentials>(data);
@@ -64,5 +69,17 @@ namespace ExploreAll.Travel
 
             return JsonConvert.SerializeObject(new AppHelper.ApiResponse().Data = null);
         }
+
+
+        public string DbConnection()
+        {
+            DataTable dt = DBSupport.GetData("LabelsTable");
+
+            return JsonConvert.SerializeObject(new AppHelper.ApiResponse().Data);
+        }
+
+
+
+
     }
 }
