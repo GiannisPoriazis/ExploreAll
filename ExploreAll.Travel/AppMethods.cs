@@ -71,12 +71,12 @@ namespace ExploreAll.Travel
         }
 
 
-        public string DbConnection()
-        {
-            DataTable dt = DBSupport.GetData("LabelsTable");
+        //public string DbConnection()
+        //{
+        //    DataTable dt = DBSupport.GetData("LabelsTable");
 
-            return JsonConvert.SerializeObject(new AppHelper.ApiResponse().Data);
-        }
+        //    return JsonConvert.SerializeObject(new AppHelper.ApiResponse().Data);
+        //}
 
 
 

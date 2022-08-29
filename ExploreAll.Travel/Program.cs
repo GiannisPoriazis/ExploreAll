@@ -10,7 +10,7 @@ namespace ExploreAll.Travel
     class HttpServer
     {
         public static HttpListener listener;
-        public static string url = "https://localhost:8080/";
+        public static string url = "http://exploreall.gr:8080/";
 
         public static async Task HandleIncomingConnections()
         {
