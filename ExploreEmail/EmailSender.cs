@@ -14,7 +14,7 @@ namespace email
 
         static void Main(string[] args)
         {
-
+            ToAdress();
             SendEmail(fromAdress:GetUserName(), GetPassword());
             Console.ReadLine();
 
@@ -73,7 +73,8 @@ namespace email
             public static string ToAdress()
             {
 
-              return "nickkaramas@gmail.com";
+              string usermail = Console.ReadLine();
+              return usermail;
 
             }
 

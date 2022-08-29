@@ -130,7 +130,7 @@
                         <!-- ============================================================== -->
                         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
                         <exploreall:PieChart ID="PieChart1" runat="server" Title="PieChart1" Sec1="Sec1" Sec2="Sec2" Sec3="Sec3"></exploreall:PieChart>
-                            <%--<div class="card">
+                           <%-- <div class="card">
                                 <h5 class="card-header"> Product Category</h5>
                                 <div class="card-body">
                                     <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
@@ -341,22 +341,9 @@
                         <!-- end category revenue  -->
                         <!-- ============================================================== -->
 
-<<<<<<< HEAD
-                            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                              <exploreall:LinearChart ID="LineChart1" runat="server" Title="LinearChart" Revenue="25000" Percentage="33"></exploreall:LinearChart>    
-                               <%--    <div class="card">
-                                    <h5 class="card-header"> Total Revenue</h5>
-                                    <div class="card-body">
-                                        <div id="morris_totalrevenue"></div>
-                                     </div>
-                                    <div class="card-footer">
-                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
-                                    </div>
-                                </div>--%>
-                            </div>
-=======
+
                         <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                            <exploreall:LinearChart ID="LineChart1" runat="server" Title="LinearChart" Revenue="25000" Percentage="33"></exploreall:LinearChart>    
+                            <exploreall:LinearChart ID="LineChart2" runat="server" Title="LinearChart" Revenue="25000" Percentage="33"></exploreall:LinearChart>    
                             <%--    <div class="card">
                                 <h5 class="card-header"> Total Revenue</h5>
                                 <div class="card-body">
@@ -366,7 +353,7 @@
                                     <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block">$26,000</span><span class="text-success float-right">+9.45%</span></p>
                                 </div>
                             </div>--%>
->>>>>>> 45b675fe529aa7184e8fb1ebc57597df2c121598
+
                         </div>
                     </div>
                     <div class="row">

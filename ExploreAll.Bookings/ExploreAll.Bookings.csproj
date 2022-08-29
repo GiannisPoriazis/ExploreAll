@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Car Rental.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Hotel and Resort.aspx" />
     <Content Include="List.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="public\build\css\custom.css" />
@@ -717,9 +719,23 @@
     <Content Include="Calendar.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car Rental.aspx.cs">
+      <DependentUpon>Car Rental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Car Rental.aspx.designer.cs">
+      <DependentUpon>Car Rental.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel and Resort.aspx.cs">
+      <DependentUpon>Hotel and Resort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hotel and Resort.aspx.designer.cs">
+      <DependentUpon>Hotel and Resort.aspx</DependentUpon>
     </Compile>
     <Compile Include="List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
