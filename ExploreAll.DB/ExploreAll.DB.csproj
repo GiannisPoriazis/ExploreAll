@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBSupport.cs" />
+    <Compile Include="NotificationEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableEntities.cs" />
   </ItemGroup>

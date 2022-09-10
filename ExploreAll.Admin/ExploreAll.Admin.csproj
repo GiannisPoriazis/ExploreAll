@@ -78,6 +78,7 @@
     <Content Include="Labels.aspx" />
     <Content Include="LanguageResources.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="NotificationsManager.aspx" />
     <Content Include="Permissions.aspx" />
     <Content Include="public\build\css\custom.css" />
     <Content Include="public\build\css\custom.min.css" />
@@ -724,6 +725,18 @@
     <Content Include="public\vendor\timeline\img\cd-icon-picture.svg" />
     <Content Include="public\vendor\timeline\js\main.js" />
     <Content Include="public\vendor\vector-map\jqvmap.css" />
+    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.3.min.js" />
     <Content Include="Sights.aspx" />
     <Content Include="signout.aspx" />
     <Content Include="StoreManagement.aspx" />
@@ -785,6 +798,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsManager.aspx.cs">
+      <DependentUpon>NotificationsManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotificationsManager.aspx.designer.cs">
+      <DependentUpon>NotificationsManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Permissions.aspx.cs">
       <DependentUpon>Permissions.aspx</DependentUpon>
@@ -1233,6 +1253,8 @@
     <Content Include="public\vendor\summernote\css\font\summernote.woff" />
     <Content Include="public\vendor\summernote\css\font\summernote.woff2" />
     <Content Include="system\template\base.Master" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

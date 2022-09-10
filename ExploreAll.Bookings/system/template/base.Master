@@ -8,7 +8,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>--%>
+
+    <script src="<%# ResolveClientUrl(@"~/")%>Scripts/jquery-3.6.0.min.js"></script>
+    <script src="<%# ResolveClientUrl(@"~/")%>Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script src="http://localhost:8080/signalr/hubs"></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<%# ResolveClientUrl(@"~/")%>public/vendor/bootstrap/css/bootstrap.min.css">
@@ -22,9 +26,9 @@
     <link rel="stylesheet" href="<%# ResolveClientUrl(@"~/")%>public/vendor/fonts/flag-icon-css/flag-icon.min.css">
 
     <%-- Custom Css --%>
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css"/>
-    <link rel="stylesheet" href="<%# ResolveClientUrl(@"~/")%>public/css/exploreall.admin.all.css"/>
-    
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css" />
+    <link rel="stylesheet" href="<%# ResolveClientUrl(@"~/")%>public/css/exploreall.admin.all.css" />
+
     <%-- Custom JS --%>
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
     <script type="text/javascript" src="<%# ResolveClientUrl(@"~/")%>public/js/exploreall.admin.all.js"></script>
@@ -36,12 +40,90 @@
 </head>
 <body>
     <script>
+        const user = "<%= User %>";
+        let hub;
+
         var pageTitle = "ExploreAll";
         var pagePath = "Dashboard"
         $(document).ready(function () {
             $(".pageheader-title").text(pageTitle);
             $(".breadcrumb-link").text(pagePath);
             $(".breadcrumb-item.active").text(pageTitle);
+
+            let notifContainer = $("#notificationsContainer");
+            let notifBell = document.getElementById("notificationBell");
+
+            $.connection.hub.url = "http://localhost:8080/signalr";
+
+            hub = $.connection.exploreAllSignalrHub;
+
+            hub.client.broadcastMessage = function (notif) {
+                if (pageTitle == "Notifications Manager") {
+                    return;
+                }
+
+                displayNotif(notif);
+            };
+
+            hub.client.getNewNotifications = function (notifs) {
+                if (pageTitle == "Notifications Manager") {
+                    return;
+                }
+
+                if (notifs.length) {
+                    for (let i = 0; i < notifs.length; i++) {
+                        displayNotif(notifs[i]);
+                    }
+                }
+            };
+
+            function updateLatestSeenNotif() {
+                let latestSeenId;
+
+                let searchStr = "notification-id-";
+                let latestNotif = $(notifContainer).children()[0];
+                let classVal = $(latestNotif).attr("class");
+                let indexOfNotifId = classVal.indexOf(searchStr);
+                if (indexOfNotifId == -1) {
+                    return;
+                }
+
+                latestSeenId = classVal.substr(indexOfNotifId + searchStr.length);
+                let nextSpaceIndex = latestSeenId.indexOf(" ");
+                if (nextSpaceIndex != -1) {
+                    latestSeenId = latestSeenId.substr(0, nextSpaceIndex);
+                }
+
+                if (latestSeenId.length) {
+                    hub.server.updateLatestSeenNotif(user, "bookings", latestSeenId);
+                }
+            };
+
+            function displayNotif(notif) {
+                let notifTemplate = $("#notificationTemplate");
+                let newNotif = notifTemplate.clone(true);
+                newNotif.removeAttr("id");
+                newNotif.addClass(`notification-id-${notif.ID}`);
+                let notifTitle = newNotif.find(".notifTitle");
+                let notifMessage = newNotif.find(".notifMessage");
+                notifTitle.text(notifTitle.text().replace("{{notifTitle}}", notif.Title));
+                notifMessage.text(notifMessage.text().replace("{{notifMessage}}", notif.Message));
+                $(notifContainer).prepend(newNotif);
+                $(".indicator").css("display", "inline-block");
+            }
+
+            $.connection.hub.start().done(function () {
+                hub.server.getNewNotifications(user, "bookings");
+            });
+
+            notifBell.addEventListener("click", clickedBell, { capture: true });
+
+            function clickedBell() {
+                updateLatestSeenNotif();
+                $(".indicator").css("display", "none");
+                notifBell.removeEventListener("click", clickedBell);
+                notifBell.addEventListener("click", clickedBell, { capture: true });
+            }
         });
     </script>
     <form id="form1" runat="server">
@@ -63,53 +145,66 @@
                                         <input class="form-control" type="text" placeholder="Search..">
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown notification">
-                                    <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                                <li id="notificationBell" class="nav-item dropdown notification">
+                                    <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i><span class="indicator"></span></a>
                                     <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
                                         <li>
-                                            <div class="notification-title"> Notification</div>
+                                            <div class="notification-title">Notification</div>
                                             <div class="notification-list">
-                                                <div class="list-group">
-                                                    <a href="#" class="list-group-item list-group-item-action active">
+                                               <div id="notificationsContainer" class="list-group">
+                                                    <a id="notificationTemplate" href="#" class="list-group-item list-group-item-action active">
                                                         <div class="notification-info">
-                                                            <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
-                                                            <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
-                                                                <div class="notification-date">2 min ago</div>
+                                                            <div class="notification-list-user-img">
+                                                                <img src="public/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                            <div class="notification-list-user-block">
+                                                                <span class="notification-list-user-name notifTitle">{{notifTitle}}</span>
+                                                                <span class="notifMessage">{{notifMessage}}</span>
                                                             </div>
                                                         </div>
-                                                    </a>                                                    
+                                                    </a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li>
-                                            <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                            <div class="list-footer"><a href="#">View all notifications</a></div>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item dropdown connection" style="display: none;">
-                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-th"></i></a>
                                     <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
                                         <li class="connection-list">
                                             <div class="row">
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/github.png" alt="" > <span>Github</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/github.png" alt="">
+                                                        <span>Github</span></a>
                                                 </div>
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/dribbble.png" alt="">
+                                                        <span>Dribbble</span></a>
                                                 </div>
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/dropbox.png" alt="">
+                                                        <span>Dropbox</span></a>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/bitbucket.png" alt="">
+                                                        <span>Bitbucket</span></a>
                                                 </div>
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/mail_chimp.png" alt=""><span>Mail chimp</span></a>
                                                 </div>
                                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
-                                                    <a href="#" class="connection-item"><img src="assets/images/slack.png" alt="" > <span>Slack</span></a>
+                                                    <a href="#" class="connection-item">
+                                                        <img src="assets/images/slack.png" alt="">
+                                                        <span>Slack</span></a>
                                                 </div>
                                             </div>
                                         </li>
@@ -149,8 +244,7 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav flex-column">
-                                    <li class="nav-divider">
-                                        Dashboard
+                                    <li class="nav-divider">Dashboard
                                     </li>
                                     <li class="nav-item ">
                                         <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
@@ -161,23 +255,21 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li> 
-                                    <li class="nav-divider">
-                                       Accomodation
+                                    </li>
+                                    <li class="nav-divider">Accomodation
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Content</a>
                                         <div id="submenu-5" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
-                                               
+
                                                 <exploreall:MenuItem runat="server" Title="Sights" Target="Sights.aspx" Permission="3"></exploreall:MenuItem>
                                                 <exploreall:MenuItem runat="server" Title="Stores" Target="StoreManagement.aspx" Permission="3"></exploreall:MenuItem>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-divider">
-                                        Accounts
-                                    </li> 
+                                    <li class="nav-divider">Accounts
+                                    </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-table"></i>Account Management</a>
                                         <div id="submenu-6" class="collapse submenu" style="">
@@ -188,21 +280,18 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-divider">
-                                        Setup
+                                    <li class="nav-divider">Setup
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-table"></i>Setup</a>
                                         <div id="submenu-7" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
-                                                
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-divider">
-                                       Accomodation 
-                                    </li> 
-                                     <li class="nav-item">
+                                    <li class="nav-divider">Accomodation 
+                                    </li>
+                                    <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-table"></i>Accomodation</a>
                                         <div id="submenu-8" class="collapse submenu" style="">
                                             <ul class="nav flex-column">
@@ -210,8 +299,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-divider">
-                                       Bookings
+                                    <li class="nav-divider">Bookings
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-table"></i>Bookings</a>
@@ -222,8 +310,7 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="nav-divider">
-                                       Finances
+                                    <li class="nav-divider">Finances
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-fw fa-table"></i>Finances</a>
@@ -281,7 +368,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                                 Copyright © 2022 ExploreAll. All rights reserved.
+                                Copyright © 2022 ExploreAll. All rights reserved.
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -304,7 +391,7 @@
     </form>
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
-    <script src="<%# ResolveClientUrl(@"~/")%>public/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <%--<script src="<%# ResolveClientUrl(@"~/")%>public/vendor/jquery/jquery-3.3.1.min.js"></script>--%>
     <!-- bootstap bundle js -->
     <script src="<%# ResolveClientUrl(@"~/")%>public/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <!-- slimscroll js -->

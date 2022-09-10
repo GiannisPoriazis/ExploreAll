@@ -1388,7 +1388,7 @@ Top Header
     position: absolute;
     top: 16px;
     right: 23px;
-    display: inline-block;
+    display: none;
     width: 7px;
     height: 7px;
     border-radius: 100%;
@@ -3495,6 +3495,9 @@ btn-link
 2.6  Notification
 -------------------------*/
 
+#notificationTemplate {
+    display: none;
+}
 
 /* -----------------------
 2.7  Icon

@@ -11,7 +11,7 @@ using System.Web;
 
 namespace ExploreAll
 {
-    public class DBSupport
+    public class DBSupport : IDisposable
     {
         public int DEFAULT_COMMAND_TIMEOUT = 120;
         private string FConnectionString;
@@ -200,6 +200,14 @@ namespace ExploreAll
             }
             return FConn;
 
+        }
+
+        public void Dispose()
+        {
+            if (FConn != null)
+            {
+                FConn.Close();
+            }
         }
     }
 }

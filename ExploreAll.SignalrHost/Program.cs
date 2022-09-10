@@ -45,10 +45,13 @@ namespace ExploreAll.SignalrHost
             {
                 var con = db.GetConnection();
                 notif.Date = DateTime.UtcNow.ToString(dateFormat);
-                var cmd = new SqlCommand($"INSERT INTO Notifications OUTPUT INSERTED.ID VALUES ('{notif.Sender}', '{notif.Title}', '{notif.Message}', '{notif.Date}')", con);
+                SqlCommand cmd = new SqlCommand($"INSERT INTO Notifications OUTPUT INSERTED.ID VALUES ('{notif.Sender}', '{notif.Title}', '{notif.Message}', '{notif.Date}')", con);
+                if (cmd != null)
+                {
+                    return (int)cmd.ExecuteScalar();
+                }
 
-                int insertedID = (int)cmd.ExecuteScalar();
-                return insertedID;
+                return 0;
             }
         }
 
